@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 2 · Skills Time!</span>
+    <h1>We Had a Concert 🎻</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 2: concert words, past simple (was/were/-ed), time markers, phonics (long i, o and u), the concert reading, and adding -ing. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Monica Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 2 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 2 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · At the Concert",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-instruments.png" alt="Ten numbered pictures of concert items: a singer on stage, drums, a violin, a set of instruments, people cheering, a recorder, an audience clapping, a stage, a programme, and a trumpet">
+        <p class="illustration-caption">Picture 1 = concert. Match the other pictures to the words.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which picture shows the drums?",
+          options:["Picture 2","Picture 3","Picture 6"], answer:"Picture 2" },
+        { type:"mcq", prompt:"Which picture shows the violin?",
+          options:["Picture 3","Picture 6","Picture 10"], answer:"Picture 3" },
+        { type:"mcq", prompt:"Which picture shows the recorder?",
+          options:["Picture 2","Picture 6","Picture 9"], answer:"Picture 6" },
+        { type:"mcq", prompt:"Which picture shows the trumpet?",
+          options:["Picture 3","Picture 9","Picture 10"], answer:"Picture 10" },
+        { type:"mcq", prompt:"Which picture shows the programme?",
+          options:["Picture 8","Picture 9","Picture 10"], answer:"Picture 9" },
+      ]
+    },
+    {
+      title: "Lesson 2 · Past Simple — was, were, -ed",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-jamie.png" alt="Jamie and his friend Mike playing football in the park">
+        <p class="illustration-caption">Jamie and Mike played football, then had lunch at the park.</p>`,
+      questions: [
+        { type:"text", prompt:"After the game, they ____ hungry. (be)", accept:["were"] },
+        { type:"text", prompt:"They ____ their lunch at the park. (have)", accept:["had"] },
+        { type:"text", prompt:"After lunch, Jamie ____ tired. (be)", accept:["was"] },
+        { type:"text", prompt:"At home, Jamie ____ his hair. (wash)", accept:["washed"] },
+        { type:"text", prompt:"Then he ____ the living room. (tidy)", accept:["tidied"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Time Markers",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-diary.png" alt="Sonia's diary text and a diary table from Friday to Friday">
+        <p class="illustration-caption">Read Sonia's diary.</p>`,
+      questions: [
+        { type:"text", prompt:"Whose birthday was last Saturday?", accept:["sonia","sonia's"] },
+        { type:"text", prompt:"What did Sonia have four days ago?", accept:["a party","her party","party"] },
+        { type:"mcq", prompt:"Which time marker means 'the day before today'?",
+          options:["Yesterday","last night","Two days ago"], answer:"Yesterday" },
+        { type:"mcq", prompt:"Which time marker matches Sonia's dinner at a restaurant?",
+          options:["last night","Today","Four days ago"], answer:"last night" },
+        { type:"mcq", prompt:"Which time marker matches Sonia's basketball game?",
+          options:["Two days ago","Yesterday","last Saturday"], answer:"Two days ago" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — Long i, o and u",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-phonics.png" alt="Six pictures: a bike, a sailboat, a flute, a lamp shining light, a bone, and a bed in a room">
+        <p class="illustration-caption">Circle the correct spelling pattern.</p>`,
+      questions: [
+        { type:"mcq", prompt:"bike",
+          options:["igh","y","i_e"], answer:"i_e" },
+        { type:"mcq", prompt:"boat",
+          options:["oa","ow","o_e"], answer:"oa" },
+        { type:"mcq", prompt:"flute",
+          options:["oo","ue","u_e"], answer:"u_e" },
+        { type:"mcq", prompt:"light",
+          options:["igh","y","i_e"], answer:"igh" },
+        { type:"mcq", prompt:"room",
+          options:["oo","ue","u_e"], answer:"oo" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — The Concert",
+      points: 5,
+      intro:`<p class="illustration-caption">"Fireworks burst above the stadium" is done for you. Unscramble the letters, then complete the sentences.</p>`,
+      questions: [
+        { type:"text", prompt:"The ____ are like two metal plates. (y c m l s a b)", accept:["cymbals"] },
+        { type:"text", prompt:"The people in the ____ play lots of instruments. (r a s t o r h c e)", accept:["orchestra"] },
+        { type:"text", prompt:"My favourite ____ of music has a loud drum that bangs.", accept:["piece"] },
+        { type:"mcq", prompt:"True or False: People don't hear the drums bang.",
+          options:["True","False"], answer:"False" },
+        { type:"mcq", prompt:"True or False: Fireworks shoot into the sky.",
+          options:["True","False"], answer:"True" },
+      ]
+    },
+    {
+      title: "Lesson 6 · Writing — Adding -ing &amp; Picture Positions",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-concertpicnic.png" alt="A concert stage with a band on the left and a crowd cheering, and a picnic with a family sitting on a blanket eating sandwiches on the right, with fireworks in the sky">
+        <p class="illustration-caption">"walk → walking" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Add -ing: sit → ____", accept:["sitting"] },
+        { type:"text", prompt:"Add -ing: shop → ____", accept:["shopping"] },
+        { type:"mcq", prompt:"Look at the picture. Where are the violins and trumpets?",
+          options:["On the left","On the right","At the bottom"], answer:"On the left" },
+        { type:"mcq", prompt:"Where is the crowd clapping and cheering?",
+          options:["At the top","At the bottom","On the right"], answer:"At the bottom" },
+        { type:"mcq", prompt:"Where is the picnic blanket with the sandwiches?",
+          options:["On the left","On the right","At the top"], answer:"On the right" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

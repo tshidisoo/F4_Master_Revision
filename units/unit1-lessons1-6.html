@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 1 · Skills Time!</span>
+    <h1>The Food Here Is Great! 🍝</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 1: restaurant words, present simple vs present continuous, time markers, phonics (long a and long e), food words, and syllables &amp; punctuation. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Amy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 1 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 1 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · At the Restaurant",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit1-restaurant.png" alt="A family eating at a restaurant: a waiter showing a menu, a waitress bringing a tray with a bowl and cup, bowls of soup on the table, and a bottle of water">
+        <p class="illustration-caption">Restaurant words.</p>`,
+      questions: [
+        { type:"text", prompt:"My dad is the ____. (a man who serves food)", accept:["waiter"] },
+        { type:"text", prompt:"They look at the ____ and decide what to order.", accept:["menu"] },
+        { type:"text", prompt:"They can order a ____ of soup. (round, deep dish)", accept:["bowl"] },
+        { type:"text", prompt:"They usually order a ____ of water. (comes sealed, you pour from it)", accept:["bottle"] },
+        { type:"text", prompt:"After dinner, the adults have a ____ of coffee.", accept:["cup"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Present Simple vs Present Continuous",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit1-harryill.png" alt="Four split pictures of Harry: usually playing football vs today reading a comic; eating with a fork vs eating with a spoon; doing homework at his desk vs lying in bed; drinking juice vs taking medicine">
+        <p class="illustration-caption">Complete the dialogue, then look at Harry (he's ill today).</p>`,
+      questions: [
+        { type:"text", prompt:"But today, you ____ sandwiches and cake. (eat)", accept:["are eating"] },
+        { type:"text", prompt:"And you always ____ water with your meal. (drink)", accept:["drink"] },
+        { type:"text", prompt:"And you normally ____ at that small table by the window. (sit)", accept:["sit"] },
+        { type:"mcq", prompt:"In picture 3, what is different about Harry today?",
+          options:["He's lying in bed instead of doing homework","He's watching TV","He's playing games"], answer:"He's lying in bed instead of doing homework" },
+        { type:"mcq", prompt:"In picture 4, what is Harry doing today that he doesn't usually do?",
+          options:["Taking medicine","Playing football","Doing homework"], answer:"Taking medicine" },
+      ]
+    },
+    {
+      title: "Lesson 3 · Time Markers",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"She's working at the moment. (PC or PS?)", accept:["pc"] },
+        { type:"text", prompt:"He always wears a hat. (PC or PS?)", accept:["ps"] },
+        { type:"text", prompt:"They're watching TV right now. (PC or PS?)", accept:["pc"] },
+        { type:"text", prompt:"(visit my grandma / always / on Fridays) — Complete: I ____ my grandma on Fridays.", accept:["always visit"] },
+        { type:"text", prompt:"(in the mornings / listen to radio / rarely) — Complete: Peter and Sue ____ to the radio in the mornings.", accept:["rarely listen"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — Long a and Long e",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"train",
+          options:["long a","long e"], answer:"long a" },
+        { type:"mcq", prompt:"happy",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"tree",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"cake",
+          options:["long a","long e"], answer:"long a" },
+        { type:"mcq", prompt:"key",
+          options:["long a","long e"], answer:"long e" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Food Around the World",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit1-foodgrid.png" alt="A word search grid with 'chilli' circled, and eight food pictures: chilli, corn, olives, beans, toast, coconut, noodles and pitta bread">
+        <p class="illustration-caption">"This hot vegetable is green or red. chilli" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Fuul is made from these.", accept:["beans"] },
+        { type:"text", prompt:"They are green or black. They are used to make ____ oil.", accept:["olive"] },
+        { type:"text", prompt:"You find this in cereals and Mexican tortillas.", accept:["corn"] },
+        { type:"text", prompt:"This fruit is brown and hard on the outside and white on the inside.", accept:["coconut"] },
+        { type:"text", prompt:"This is hot, hard bread.", accept:["toast"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Syllables &amp; Punctuation",
+      points: 5,
+      intro:`<p class="illustration-caption">"soup" has one syllable — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"How many syllables does 'coffee' have?",
+          options:["1","2","3","4"], answer:"2" },
+        { type:"mcq", prompt:"How many syllables does 'umbrella' have?",
+          options:["1","2","3","4"], answer:"3" },
+        { type:"mcq", prompt:"How many syllables does 'calculator' have?",
+          options:["1","2","3","4"], answer:"4" },
+        { type:"mcq", prompt:"Which sentence uses capital letters correctly?",
+          options:["i always eat lunch at school.","I always eat lunch at school."], answer:"I always eat lunch at school." },
+        { type:"mcq", prompt:"What punctuation mark goes at the end of \"do you like cooking\"?",
+          options:[".","?","!"], answer:"?" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

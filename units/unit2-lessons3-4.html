@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 – Lessons 3 &amp; 4 | We Had a Concert</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 2</span>
+    <h1>We Had a Concert 🎻</h1>
+    <p>Lessons 3 &amp; 4 — Time Markers &amp; Phonics: Long i, Long o and Long u Sounds</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Sonia Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 2 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 2 – Lessons 3 & 4 (Time markers — past simple; phonics: long i, long o, long u)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Sonia's Diary — What Happened When?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-diary.png" alt="A short diary text about Sonia's week: her birthday, her party, a basketball game, school, and dinner at a restaurant, next to a diary table from Friday to Friday">
+        <p class="illustration-caption">Read Sonia's diary, then answer the questions.</p>`,
+      questions: [
+        { type:"text", prompt:"Whose birthday was last Saturday?", accept:["sonia","sonia's"] },
+        { type:"text", prompt:"What did Sonia have four days ago?", accept:["a party","her party","party"] },
+        { type:"text", prompt:"What did Sonia play two days ago?", accept:["basketball","a basketball game","basketball game"] },
+        { type:"text", prompt:"Where was Sonia yesterday?", accept:["school","at school"] },
+        { type:"text", prompt:"Where did Sonia have dinner last night?", accept:["a restaurant","restaurant","at a restaurant"] },
+      ]
+    },
+    {
+      title: "Section B · Time Marker Match",
+      points: 6,
+      intro:`<p class="illustration-caption">Which time marker matches each event in Sonia's diary?</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which time marker tells us when Sonia's birthday was?",
+          options:["last Saturday","Four days ago","Today"], answer:"last Saturday" },
+        { type:"mcq", prompt:"Which time marker tells us when Sonia had her party?",
+          options:["Four days ago","Two days ago","Yesterday"], answer:"Four days ago" },
+        { type:"mcq", prompt:"Which time marker tells us when Sonia played basketball?",
+          options:["Two days ago","Yesterday","last night"], answer:"Two days ago" },
+        { type:"mcq", prompt:"Which time marker tells us when Sonia was at school?",
+          options:["Yesterday","last night","Today"], answer:"Yesterday" },
+        { type:"mcq", prompt:"Which time marker tells us when Sonia had dinner at a restaurant?",
+          options:["last night","Today","last Saturday"], answer:"last night" },
+        { type:"mcq", prompt:"Which time marker means 'this day, right now'?",
+          options:["Today","Yesterday","last night"], answer:"Today" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — Long i, o or u? (Part 1)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-phonics.png" alt="Six pictures: a bike, a sailboat, a flute, a lamp shining light, a bone, and a bed in a room">
+        <p class="illustration-caption">"bike — i_e" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"boat",
+          options:["oa","ow","o_e"], answer:"oa" },
+        { type:"mcq", prompt:"flute",
+          options:["oo","ue","u_e"], answer:"u_e" },
+        { type:"mcq", prompt:"light",
+          options:["igh","y","i_e"], answer:"igh" },
+        { type:"mcq", prompt:"bone",
+          options:["oa","ow","o_e"], answer:"o_e" },
+        { type:"mcq", prompt:"room",
+          options:["oo","ue","u_e"], answer:"oo" },
+      ]
+    },
+    {
+      title: "Section D · Phonics — Long i, o or u? (Part 2)",
+      points: 4,
+      intro:`<p class="illustration-caption">Word bank: bike, cry, blow, blue.</p>`,
+      questions: [
+        { type:"mcq", prompt:"bike",
+          options:["igh","y","i_e"], answer:"i_e" },
+        { type:"mcq", prompt:"cry",
+          options:["igh","y","i_e"], answer:"y" },
+        { type:"mcq", prompt:"blow",
+          options:["oa","ow","o_e"], answer:"ow" },
+        { type:"mcq", prompt:"blue",
+          options:["oo","ue","u_e"], answer:"ue" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

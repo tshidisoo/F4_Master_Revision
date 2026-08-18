@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 4 · Skills Time!</span>
+    <h1>Whose Jacket Is This? 🎽</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 4: sports words, possessive pronouns, adverbs, phonics (ll and rr), the tennis reading, and apostrophes &amp; sports instructions. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Liz Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 4 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 4 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Sports Time Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit4-sportsscene.png" alt="A sports scene with two tennis courts, a football match, a group of footballers, a trophy, and trainers and a rucksack on the ground">
+        <p class="illustration-caption">Look at the scoreboard: Player 1 has 2, Player 2 has 4.</p>`,
+      questions: [
+        { type:"text", prompt:"You wear these to go running.", accept:["trainers"] },
+        { type:"text", prompt:"You hold this when you play tennis.", accept:["racket"] },
+        { type:"text", prompt:"This is a bag you wear on your back.", accept:["rucksack"] },
+        { type:"text", prompt:"A prize for winning.", accept:["trophy"] },
+        { type:"text", prompt:"Player 2 has more points than Player 1, so Player 2 has ____.", accept:["won"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Possessive Pronouns",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit4-park.png" alt="Abby, Liz, Sidney and Kate at the park with trainers, a ball and a frisbee">
+        <p class="illustration-caption">"I can't find my racket" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This is my dad's basketball trophy. → It's ____.", accept:["his"] },
+        { type:"text", prompt:"This is Lucy's rucksack. → It's ____.", accept:["hers"] },
+        { type:"text", prompt:"These are their rackets. → They're ____.", accept:["theirs"] },
+        { type:"text", prompt:"Abby put on the blue trainers. \"These ones are ____,\" she said.", accept:["mine"] },
+        { type:"text", prompt:"\"This ball is ____. They say we can borrow it,\" said Sidney. (it belongs to their friends)", accept:["theirs"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Adverbs of Manner",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"Henry's parents watched the match. They cheered ____.",
+          options:["loud","loudly"], answer:"loudly" },
+        { type:"mcq", prompt:"Henry's team won the volleyball game. They played very ____.",
+          options:["good","well"], answer:"well" },
+        { type:"mcq", prompt:"The other team played ____. All the players were very tired.",
+          options:["badly","bad"], answer:"badly" },
+        { type:"text", prompt:"How did Henry punch the ball? He ____.", accept:["punched it carefully","punched the ball carefully"] },
+        { type:"text", prompt:"How did the other team run? They ____.", accept:["ran slowly"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — ll or rr?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit4-llrr.png" alt="Six pictures: a bell, a mirror, a cherry, a shell, a carrot, and a girl smelling a flower">
+        <p class="illustration-caption">Complete each word with ll or rr.</p>`,
+      questions: [
+        { type:"mcq", prompt:"mi____or",
+          options:["ll","rr"], answer:"rr" },
+        { type:"mcq", prompt:"che____y",
+          options:["ll","rr"], answer:"rr" },
+        { type:"mcq", prompt:"she____",
+          options:["ll","rr"], answer:"ll" },
+        { type:"mcq", prompt:"ca____ot",
+          options:["ll","rr"], answer:"rr" },
+        { type:"mcq", prompt:"sme____",
+          options:["ll","rr"], answer:"ll" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — A Short History of Tennis",
+      points: 5,
+      intro:`<p class="illustration-caption">Complete the crossword clues.</p>`,
+      questions: [
+        { type:"text", prompt:"Down 1: An important sport competition.", accept:["championship"] },
+        { type:"text", prompt:"Down 3: Material used to make gloves or shoes.", accept:["leather"] },
+        { type:"text", prompt:"Across 5: People who love to watch their favourite sport.", accept:["fans"] },
+        { type:"text", prompt:"Across 6: The place where people play tennis or basketball.", accept:["court"] },
+        { type:"text", prompt:"Across 7: The ... of the game say that you mustn't touch the ball.", accept:["rules"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Writing — Apostrophes &amp; Sports Rules",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit4-tennisserve.png" alt="A tennis player serving the ball">
+        <p class="illustration-caption">"This player's bag is green" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Add an apostrophe where needed: Janes team won at basketball.", accept:["jane's team won at basketball"] },
+        { type:"mcq", prompt:"Does this sentence need an apostrophe? \"Look at this bird. Its wings are really beautiful.\"",
+          options:["Yes","No"], answer:"No" },
+        { type:"text", prompt:"Do you like my new bike? ____ a racing bike. (it is)", accept:["it's"] },
+        { type:"text", prompt:"A football team has ____.", accept:["11 players"] },
+        { type:"text", prompt:"To score points in basketball, you ____.", accept:["throw the ball into the hoop"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 3 · Skills Time!</span>
+    <h1>The Dinosaur Museum 🦴</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 3: museum words, past simple negatives, past simple questions, phonics (f and ph), the space/dinosaur reading, and punctuation &amp; past simple verbs. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Simon Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 3 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 3 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · At the Museum",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit3-wordsnake.png" alt="A drawing of a dinosaur skeleton with the hidden words skeleton, model, robot, alive, scream, museum, dinosaurs, roar, scary, dead written along its body">
+        <p class="illustration-caption">Read the clues and find the words on the dinosaur.</p>`,
+      questions: [
+        { type:"text", prompt:"You can go to this place to see things from the past.", accept:["museum"] },
+        { type:"text", prompt:"The bones inside your body are this.", accept:["skeleton","skeletons"] },
+        { type:"text", prompt:"A loud noise that some animals make.", accept:["roar"] },
+        { type:"text", prompt:"Something that makes you feel scared.", accept:["scary"] },
+        { type:"text", prompt:"People make these to show you what something looks like.", accept:["model","models"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Our School Trips",
+      points: 5,
+      intro:`<p class="illustration-caption">Class 4L went to a museum. They bought pictures, made models, heard Roman songs and ate fruit.<br>Class 4P went to the theatre. They bought postcards, made theatre programmes, heard dinosaur robots roaring and ate ice cream.</p>`,
+      questions: [
+        { type:"text", prompt:"Class 4L (hear ✓): They ____.", accept:["heard roman songs"] },
+        { type:"text", prompt:"Class 4L (eat ✗): They ____.", accept:["didn't eat ice cream"] },
+        { type:"text", prompt:"Class 4P (go ✗): They ____.", accept:["didn't go to a museum"] },
+        { type:"text", prompt:"Class 4P (hear ✗): They ____.", accept:["didn't hear roman songs"] },
+        { type:"text", prompt:"Class 4P (eat ✓): They ____.", accept:["ate ice cream"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Past Simple Questions",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"What did you buy?",
+          options:["I bought a new coat and hat.","I went with my grandma and my cousins.","No, we didn't. We went home."], answer:"I bought a new coat and hat." },
+        { type:"mcq", prompt:"Who did you go with?",
+          options:["I went with my grandma and my cousins.","The one called Style.","Yes, I did."], answer:"I went with my grandma and my cousins." },
+        { type:"mcq", prompt:"Did you eat in a restaurant?",
+          options:["No, we didn't. We went home.","Yes, I did.","I bought a new coat and hat."], answer:"No, we didn't. We went home." },
+        { type:"text", prompt:"____ you have a good time? (question word)", accept:["did"] },
+        { type:"text", prompt:"Yes, I ____.", accept:["did"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — f or ph?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit3-phonics.png" alt="Six pictures: a scarf, a telephone, a family photo, a foot, a flamingo, and an alphabet book showing letters A and B">
+        <p class="illustration-caption">Circle the correct spelling.</p>`,
+      questions: [
+        { type:"mcq", prompt:"scarf",
+          options:["ph","f"], answer:"f" },
+        { type:"mcq", prompt:"photo",
+          options:["ph","f"], answer:"ph" },
+        { type:"mcq", prompt:"foot",
+          options:["ph","f"], answer:"f" },
+        { type:"mcq", prompt:"telephone",
+          options:["ph","f"], answer:"ph" },
+        { type:"mcq", prompt:"flamingo",
+          options:["ph","f"], answer:"f" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Dinosaur Data",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit3-trex.png" alt="A T-Rex dinosaur roaring">
+        <p class="illustration-caption">"Some scientists study space" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Scientists look for ____ made by the stars.", accept:["patterns"] },
+        { type:"text", prompt:"Sometimes, ____ fall from other planets and fly through space.", accept:["rocks"] },
+        { type:"text", prompt:"These rocks are called ____.", accept:["asteroids"] },
+        { type:"text", prompt:"According to the text, when did the dinosaurs disappear?", accept:["65 million years ago","65 million years"] },
+        { type:"text", prompt:"Scientists have found dinosaur skeletons, but haven't found any dinosaur ____.", accept:["skin"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Writing — Punctuation &amp; Past Simple",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"The man was angry. He said, \"Don't touch the models___\"",
+          options:[".","!","?"], answer:"!" },
+        { type:"mcq", prompt:"Sally said, \"I watched TV yesterday___\"",
+          options:[".","!","?"], answer:"." },
+        { type:"text", prompt:"Past simple: go → ____", accept:["went"] },
+        { type:"text", prompt:"Past simple: sing → ____", accept:["sang"] },
+        { type:"mcq", prompt:"Which word goes with a museum trip?",
+          options:["skeleton","sheep","stage"], answer:"skeleton" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

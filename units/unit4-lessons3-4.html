@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 – Lessons 3 &amp; 4 | Whose Jacket Is This?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 4</span>
+    <h1>Whose Jacket Is This? 🎽</h1>
+    <p>Lessons 3 &amp; 4 — Adverbs of Manner &amp; Phonics: ll and rr</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Henry Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 4 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 4 – Lessons 3 & 4 (Adverbs of manner; phonics: ll and rr)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Grammar — Circle the Adverb",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit4-volleyball.png" alt="Two children playing volleyball, jumping to hit the ball over the net">
+        <p class="illustration-caption">"The teams walked onto the court quietly" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Henry's parents watched the match. They cheered ____.",
+          options:["loud","loudly"], answer:"loudly" },
+        { type:"mcq", prompt:"Henry punched the ball very ____.",
+          options:["carefully","careful"], answer:"carefully" },
+        { type:"mcq", prompt:"The other team played ____. All the players were very tired.",
+          options:["badly","bad"], answer:"badly" },
+        { type:"mcq", prompt:"They didn't run fast. In fact, they ran quite ____.",
+          options:["slow","slowly"], answer:"slowly" },
+        { type:"mcq", prompt:"Henry's team won the volleyball game. They played very ____.",
+          options:["good","well"], answer:"well" },
+        { type:"mcq", prompt:"The teams walked onto the court ____.",
+          options:["quiet","quietly"], answer:"quietly" },
+      ]
+    },
+    {
+      title: "Section B · Grammar — Answer with Adverbs",
+      points: 5,
+      intro:`<p class="illustration-caption">"How did the teams go onto the court? They walked quietly." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"How did the parents cheer? They ____.", accept:["cheered loudly"] },
+        { type:"text", prompt:"How did Henry punch the ball? He ____.", accept:["punched it carefully","punched the ball carefully"] },
+        { type:"text", prompt:"How did Henry's team play? They ____.", accept:["played well"] },
+        { type:"text", prompt:"How did the other team play? They ____.", accept:["played badly"] },
+        { type:"text", prompt:"How did the other team run? They ____.", accept:["ran slowly"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — ll or rr? (Part 1)",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit4-llrr.png" alt="Six pictures: a bell, a mirror, a cherry, a shell, a carrot, and a girl smelling a flower">
+        <p class="illustration-caption">"bell" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"mi____or (a glass you look at yourself in)",
+          options:["ll","rr"], answer:"rr" },
+        { type:"mcq", prompt:"che____y (a small red fruit)",
+          options:["ll","rr"], answer:"rr" },
+        { type:"mcq", prompt:"she____ (a hard covering, found on a beach)",
+          options:["ll","rr"], answer:"ll" },
+        { type:"mcq", prompt:"ca____ot (an orange vegetable)",
+          options:["ll","rr"], answer:"rr" },
+      ]
+    },
+    {
+      title: "Section D · Phonics — ll or rr? (Part 2)",
+      points: 5,
+      intro:`<p class="illustration-caption">Word bank: smell, mirror, carrot, shell, bell, cherry.</p>`,
+      questions: [
+        { type:"mcq", prompt:"sme____ (what your nose does)",
+          options:["ll","rr"], answer:"ll" },
+        { type:"mcq", prompt:"be____ (it rings)",
+          options:["ll","rr"], answer:"ll" },
+        { type:"mcq", prompt:"mirror",
+          options:["has ll","has rr"], answer:"has rr" },
+        { type:"mcq", prompt:"carrot",
+          options:["has ll","has rr"], answer:"has rr" },
+        { type:"mcq", prompt:"shell",
+          options:["has ll","has rr"], answer:"has ll" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

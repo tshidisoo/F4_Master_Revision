@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5 – Lessons 3 &amp; 4 | Go Back to the Roundabout</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 5</span>
+    <h1>Go Back to the Roundabout 🚦</h1>
+    <p>Lessons 3 &amp; 4 — Why / Because &amp; Phonics: c and ck Endings</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Sandy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 5 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 5 – Lessons 3 & 4 (why / because; phonics: c and ck endings)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Match the Questions and Answers",
+      points: 5,
+      intro:`<p class="illustration-caption">"Why are you late? → Because my alarm clock didn't ring." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Why are you late?",
+          options:["Because my alarm clock didn't ring.","Because it didn't have batteries.","Because the shop was shut."], answer:"Because my alarm clock didn't ring." },
+        { type:"mcq", prompt:"Why didn't it ring?",
+          options:["Because I didn't buy any.","Because it didn't have batteries.","Because yesterday was a holiday."], answer:"Because it didn't have batteries." },
+        { type:"mcq", prompt:"Why didn't it have batteries?",
+          options:["Because I didn't buy any.","Because the shop was shut.","Because my alarm clock didn't ring."], answer:"Because I didn't buy any." },
+        { type:"mcq", prompt:"Why didn't you buy any?",
+          options:["Because the shop was shut.","Because yesterday was a holiday.","Because it didn't have batteries."], answer:"Because the shop was shut." },
+        { type:"mcq", prompt:"Why was the shop shut?",
+          options:["Because yesterday was a holiday.","Because I didn't buy any.","Because my alarm clock didn't ring."], answer:"Because yesterday was a holiday." },
+      ]
+    },
+    {
+      title: "Section B · Why Are You...?",
+      points: 3,
+      intro:`<p class="illustration-caption">A girl reads until late at night, then a boy talks happily with his mum after running a race.</p>`,
+      questions: [
+        { type:"text", prompt:"Why are you tired? Because I ____.", accept:["read until late","read late"] },
+        { type:"text", prompt:"Complete the question: ____ are you happy?", accept:["why"] },
+        { type:"text", prompt:"Because I ____ a race.", accept:["won"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — c or ck?",
+      points: 6,
+      intro:`<p class="illustration-caption">"music" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"du__ (a bird that swims on ponds)",
+          options:["c","ck"], answer:"ck" },
+        { type:"mcq", prompt:"clo__ (it tells you the time)",
+          options:["c","ck"], answer:"ck" },
+        { type:"mcq", prompt:"plasti__ (a material used to make bottles)",
+          options:["c","ck"], answer:"c" },
+        { type:"mcq", prompt:"picni__ (a meal you eat outside)",
+          options:["c","ck"], answer:"c" },
+        { type:"mcq", prompt:"ne__ (part of your body between your head and shoulders)",
+          options:["c","ck"], answer:"ck" },
+        { type:"mcq", prompt:"music",
+          options:["ends in c","ends in ck"], answer:"ends in c" },
+      ]
+    },
+    {
+      title: "Section D · Complete with Why or Because",
+      points: 6,
+      questions: [
+        { type:"text", prompt:"____ are you late?", accept:["why"] },
+        { type:"text", prompt:"Because my alarm clock didn't ____.", accept:["ring"] },
+        { type:"text", prompt:"Why didn't it ring? ____ it didn't have batteries.", accept:["because"] },
+        { type:"text", prompt:"Why didn't it have batteries? Because I didn't ____ any.", accept:["buy"] },
+        { type:"text", prompt:"____ didn't you buy any?", accept:["why"] },
+        { type:"text", prompt:"Why was the shop shut? Because yesterday was a ____.", accept:["holiday"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

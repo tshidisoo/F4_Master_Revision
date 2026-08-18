@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5 – Lessons 1 &amp; 2 | Go Back to the Roundabout</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 5</span>
+    <h1>Go Back to the Roundabout 🚦</h1>
+    <p>Lessons 1 &amp; 2 — Direction Words &amp; have to / has to / had to</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Thomas Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 5 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 5 – Lessons 1 & 2 (Direction words; have to / has to / had to)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Direction Words (Part 1)",
+      points: 5,
+      intro:`<p class="illustration-caption">Woman: Excuse me. Is Summerside Primary School this way?<br>Man: Let me look at my map. No, it isn't this way...</p>`,
+      questions: [
+        { type:"text", prompt:"First, you have to ____ to the supermarket. (a U-turn — go the opposite way)", accept:["go back"] },
+        { type:"text", prompt:"Then ____. (keep going the same direction, don't turn)", accept:["go straight on"] },
+        { type:"text", prompt:"When you get to the ____, you must turn right. (a circular junction)", accept:["roundabout"] },
+        { type:"text", prompt:"When you get to the roundabout, you must ____.", accept:["turn right"] },
+        { type:"text", prompt:"When you get to the ____, then you have to turn left. (the red/yellow/green lights that control traffic)", accept:["traffic lights"] },
+      ]
+    },
+    {
+      title: "Section B · Direction Words (Part 2)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit5-directionsmap.png" alt="A map with a roundabout, a petrol station, a school, a supermarket, a swimming pool and a winding path through trees">
+        <p class="illustration-caption">"Here's the school, opposite the petrol station" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Then you have to ____. (the opposite of turn right)", accept:["turn left"] },
+        { type:"text", prompt:"Here's the school, opposite the ____. (a place where cars fill up with fuel)", accept:["petrol station"] },
+        { type:"text", prompt:"Thank you. I must ____! I don't want to be late for the school concert. (do something quickly)", accept:["hurry"] },
+        { type:"text", prompt:"Goodbye. Don't ____! (the opposite of finding your way)", accept:["get lost"] },
+        { type:"text", prompt:"Let me look at my ____. (a drawing that shows roads and places)", accept:["map"] },
+      ]
+    },
+    {
+      title: "Section C · Grammar — have to, has to, had to",
+      points: 6,
+      intro:`<p class="illustration-caption">"The light is on red. The cars have to wait" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When it rained, we ____ put up umbrellas.", accept:["had to"] },
+        { type:"text", prompt:"Now he is older, he ____ help his grandad.", accept:["has to"] },
+        { type:"text", prompt:"They ____ run fast if they want to catch the bus.", accept:["have to"] },
+        { type:"text", prompt:"I don't ____ do any homework in the holidays!", accept:["have to"] },
+        { type:"text", prompt:"Yesterday, she ____ take a test to go to the new school.", accept:["had to"] },
+        { type:"text", prompt:"The light is on red. The cars ____ wait.", accept:["have to"] },
+      ]
+    },
+    {
+      title: "Section D · Directions to the Station",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit5-stationmap.png" alt="A map showing a road from an arrow through a roundabout, past a petrol station and a shop, to a train station">
+        <p class="illustration-caption">"1 Go straight on." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"After going straight on to the roundabout, what do you do?",
+          options:["Turn right","Turn left","Go straight on"], answer:"Turn right" },
+        { type:"mcq", prompt:"What do you go past on the way to the station?",
+          options:["The petrol station","The swimming pool","The cinema"], answer:"The petrol station" },
+        { type:"mcq", prompt:"Where is the shop?",
+          options:["On your right","On your left","Behind you"], answer:"On your right" },
+        { type:"mcq", prompt:"To reach the station, you then...",
+          options:["Turn left","Turn right","Go back"], answer:"Turn left" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

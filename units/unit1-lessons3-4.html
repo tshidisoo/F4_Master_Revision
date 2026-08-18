@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 – Lessons 3 &amp; 4 | The Food Here Is Great!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 1</span>
+    <h1>The Food Here Is Great! 🍝</h1>
+    <p>Lessons 3 &amp; 4 — Time Markers &amp; Phonics: Long a and Long e Sounds</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Ben Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 1 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 1 – Lessons 3 & 4 (Time markers — present simple/continuous; phonics: long a and long e)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Time Markers — PC or PS?",
+      points: 5,
+      intro:`<p class="illustration-caption">Circle the time marker, then write PC (present continuous) or PS (present simple). "I sometimes visit my cousins. PS" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"She's working at the moment. (PC or PS?)", accept:["pc"] },
+        { type:"text", prompt:"Today, we're eating at a café. (PC or PS?)", accept:["pc"] },
+        { type:"text", prompt:"I never go to school by car. (PC or PS?)", accept:["ps"] },
+        { type:"text", prompt:"They're watching TV right now. (PC or PS?)", accept:["pc"] },
+        { type:"text", prompt:"He always wears a hat. (PC or PS?)", accept:["ps"] },
+      ]
+    },
+    {
+      title: "Section B · Write Sentences",
+      points: 4,
+      intro:`<p class="illustration-caption">"(right now / play volleyball) → Sally is playing volleyball right now." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"(visit my grandma / always / on Fridays) — Complete: I ____ my grandma on Fridays.", accept:["always visit"] },
+        { type:"text", prompt:"(read new book / today) — Complete: Today, I ____ a new book.", accept:["'m reading","am reading"] },
+        { type:"text", prompt:"(now / walk to school) — Complete: I ____ to school now.", accept:["'m walking","am walking"] },
+        { type:"text", prompt:"(in the mornings / listen to radio / rarely) — Complete: Peter and Sue ____ to the radio in the mornings.", accept:["rarely listen"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — Long a or Long e? (Part 1)",
+      points: 5,
+      intro:`<p class="illustration-caption">Word bank: train, happy, Spain, feet, tray (plus Monday, which is done for you as long a).</p>`,
+      questions: [
+        { type:"mcq", prompt:"train",
+          options:["long a","long e"], answer:"long a" },
+        { type:"mcq", prompt:"happy",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"Spain",
+          options:["long a","long e"], answer:"long a" },
+        { type:"mcq", prompt:"feet",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"tray",
+          options:["long a","long e"], answer:"long a" },
+      ]
+    },
+    {
+      title: "Section D · Phonics — Long a or Long e? (Part 2)",
+      points: 6,
+      intro:`<p class="illustration-caption">Word bank: leaves, cake, tree, please, key, race.</p>`,
+      questions: [
+        { type:"mcq", prompt:"leaves",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"cake",
+          options:["long a","long e"], answer:"long a" },
+        { type:"mcq", prompt:"tree",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"please",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"key",
+          options:["long a","long e"], answer:"long e" },
+        { type:"mcq", prompt:"race",
+          options:["long a","long e"], answer:"long a" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

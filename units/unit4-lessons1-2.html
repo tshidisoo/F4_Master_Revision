@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 – Lessons 1 &amp; 2 | Whose Jacket Is This?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 4</span>
+    <h1>Whose Jacket Is This? 🎽</h1>
+    <p>Lessons 1 &amp; 2 — Sports Words &amp; Possessive Pronouns</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Abby Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 4 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 4 – Lessons 1 & 2 (Sports words; possessive pronouns)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Sports Time — Words (Part 1)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit4-sportsscene.png" alt="A sports scene with two tennis courts, a football match, a group of footballers, a trophy, and trainers and a rucksack on the ground">
+        <p class="illustration-caption">Yesterday, we had a sports competition at school. "There were two teams" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"There were five ____ in each team. (people playing a sport)", accept:["players"] },
+        { type:"text", prompt:"I had my sports things in my ____ on my back. (a bag you wear on your back)", accept:["rucksack"] },
+        { type:"text", prompt:"I took off my school shoes and put on my ____. (you wear these to go running)", accept:["trainers"] },
+        { type:"text", prompt:"It was cold, so we had to wear our sports ____. (you wear this over your T-shirt)", accept:["jackets","jacket"] },
+        { type:"text", prompt:"A group of footballers who play together is a ____.", accept:["team"] },
+      ]
+    },
+    {
+      title: "Section B · Sports Time — Words (Part 2)",
+      points: 5,
+      intro:`<p class="illustration-caption">The score was Red Team 1, Blue Team 0.</p>`,
+      questions: [
+        { type:"text", prompt:"The score was Red Team 1, Blue Team 0, so my team ____.", accept:["won"] },
+        { type:"text", prompt:"I ____ for the red team. My friend Jamie passed me the ball.", accept:["scored"] },
+        { type:"text", prompt:"Then I ____ it hard and it went in the net. (to move a ball with your foot)", accept:["kicked"] },
+        { type:"text", prompt:"I didn't play tennis because I didn't have my tennis ____. (you hold this when you play tennis)", accept:["racket"] },
+        { type:"text", prompt:"At the end of the competition, the children in the red team got a ____. (a prize for winning)", accept:["trophy"] },
+      ]
+    },
+    {
+      title: "Section C · Grammar — Possessive Pronouns",
+      points: 6,
+      intro:`<p class="illustration-caption">"I can't find my racket." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This is your water bottle. → It's ____.", accept:["yours"] },
+        { type:"text", prompt:"This is my jacket. → It's ____.", accept:["mine"] },
+        { type:"text", prompt:"This is my dad's basketball trophy. → It's ____.", accept:["his"] },
+        { type:"text", prompt:"This is Lucy's rucksack. → It's ____.", accept:["hers"] },
+        { type:"text", prompt:"These are our trainers. → They're ____.", accept:["ours"] },
+        { type:"text", prompt:"These are their rackets. → They're ____.", accept:["theirs"] },
+      ]
+    },
+    {
+      title: "Section D · At the Park",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit4-park.png" alt="Abby, Liz, Sidney and Kate at the park with trainers, a ball and a frisbee">
+        <p class="illustration-caption">Abby put on the blue trainers. "These ones are mine," she said (given).</p>`,
+      questions: [
+        { type:"text", prompt:"Abby gave the green trainers to her sister Liz. \"These trainers are ____,\" she said.", accept:["yours"] },
+        { type:"text", prompt:"\"Now where's Sidney?\" said Abby. \"These white trainers are ____.\"", accept:["hers"] },
+        { type:"text", prompt:"\"But this ball is ____. They say we can borrow it,\" said Sidney. (the ball belongs to their friends)", accept:["theirs"] },
+        { type:"text", prompt:"\"Do they want a frisbee? They can borrow ____,\" said Abby. (the frisbee belongs to Abby's group)", accept:["ours"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

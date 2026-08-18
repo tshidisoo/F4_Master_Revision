@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 – Lessons 1 &amp; 2 | The Dinosaur Museum</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 3</span>
+    <h1>The Dinosaur Museum 🦴</h1>
+    <p>Lessons 1 &amp; 2 — Museum Words &amp; Past Simple Negatives</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Emma Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 3 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 3 – Lessons 1 & 2 (Dinosaur museum words; past simple negatives)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · At the Museum — Words (Part 1)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit3-wordsnake.png" alt="A drawing of a dinosaur skeleton with the hidden words skeleton, model, robot, alive, scream, museum, dinosaurs, roar, scary, dead written along its body">
+        <p class="illustration-caption">"Last week, my class went to a museum" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Last week, my class went to a museum. We learnt how ____ lived.", accept:["dinosaurs"] },
+        { type:"text", prompt:"Once, there were lots of dinosaurs, but now they are ____.", accept:["dead"] },
+        { type:"text", prompt:"My friend Emma bought a ____ of a dinosaur. (a small copy that shows what something looks like)", accept:["model"] },
+        { type:"text", prompt:"There were some very big dinosaur ____. (the bones inside a body)", accept:["skeletons","skeleton"] },
+        { type:"text", prompt:"The teacher pressed a button to make the dinosaur ____. (the loud noise some animals make)", accept:["roar"] },
+      ]
+    },
+    {
+      title: "Section B · At the Museum — Words (Part 2)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit3-dinorobot.png" alt="A robot T-Rex dinosaur roaring at a museum, with children screaming and covering their ears">
+        <p class="illustration-caption">The robot dinosaur roared and scared everyone!</p>`,
+      questions: [
+        { type:"text", prompt:"It was very ____. (something that makes you feel afraid)", accept:["scary"] },
+        { type:"text", prompt:"All the children started to ____. (the noise you make when you are scared)", accept:["scream"] },
+        { type:"text", prompt:"But the dinosaur wasn't ____. (the opposite of dead)", accept:["alive"] },
+        { type:"text", prompt:"It was only a ____. (a kind of computer that can move and work)", accept:["robot"] },
+        { type:"text", prompt:"You can go to a ____ to see things from the past.", accept:["museum"] },
+      ]
+    },
+    {
+      title: "Section C · Grammar — Past Simple Negatives",
+      points: 6,
+      intro:`<p class="illustration-caption">"I went to the zoo. → I didn't go." is done for you. Complete the negative sentences.</p>`,
+      questions: [
+        { type:"text", prompt:"I went to the zoo. → I ____.", accept:["didn't go"] },
+        { type:"text", prompt:"I bought a ball. → I ____.", accept:["didn't buy one"] },
+        { type:"text", prompt:"I saw some giraffes. → I ____.", accept:["didn't see any"] },
+        { type:"text", prompt:"I ate an ice cream. → I ____.", accept:["didn't eat one"] },
+        { type:"text", prompt:"I heard the lions. → I ____.", accept:["didn't hear any"] },
+        { type:"text", prompt:"I drank orange juice. → I ____.", accept:["didn't drink any"] },
+      ]
+    },
+    {
+      title: "Section D · Our School Trips",
+      points: 4,
+      intro:`<p class="illustration-caption">Class 4L went to a museum. They bought pictures, made models, heard Roman songs and ate fruit.<br>Class 4P went to the theatre. They bought postcards, made theatre programmes, heard dinosaur robots roaring and ate ice cream.</p>`,
+      questions: [
+        { type:"text", prompt:"Class 4L (buy ✗): They ____.", accept:["didn't buy postcards"] },
+        { type:"text", prompt:"Class 4L (make ✗): They ____.", accept:["didn't make theatre programmes"] },
+        { type:"text", prompt:"Class 4P (make ✓): They ____.", accept:["made theatre programmes"] },
+        { type:"text", prompt:"Class 4P (buy ✓): They ____.", accept:["bought postcards"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

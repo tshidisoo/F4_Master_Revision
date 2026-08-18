@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 – Lessons 1 &amp; 2 | The Food Here Is Great!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 1</span>
+    <h1>The Food Here Is Great! 🍝</h1>
+    <p>Lessons 1 &amp; 2 — At the Restaurant &amp; Present Simple vs Present Continuous</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Amy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 1 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 1 – Lessons 1 & 2 (At the restaurant; present simple vs present continuous)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · At the Restaurant — Words (Part 1)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit1-restaurant.png" alt="A family eating at a restaurant: a waiter showing a menu, a waitress bringing a tray with a bowl and cup, bowls of soup on the table, and a bottle of water">
+        <p class="illustration-caption">"My parents both wear green uniforms" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"My mum is the ____. (a woman who serves food)", accept:["waitress"] },
+        { type:"text", prompt:"My dad is the ____. (a man who serves food)", accept:["waiter"] },
+        { type:"text", prompt:"Lots of ____ are children. (people eating at the restaurant)", accept:["customers"] },
+        { type:"text", prompt:"They look at the ____ and decide what to order. (lists the food)", accept:["menu"] },
+        { type:"text", prompt:"They can order a ____ of soup. (round, deep dish)", accept:["bowl"] },
+      ]
+    },
+    {
+      title: "Section B · At the Restaurant — Words (Part 2)",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"They can order a ____ of pasta. (flat dish)", accept:["plate"] },
+        { type:"text", prompt:"They usually order a ____ of juice. (you drink from this)", accept:["glass"] },
+        { type:"text", prompt:"They usually order a ____ of water. (comes sealed, you pour from it)", accept:["bottle"] },
+        { type:"text", prompt:"After dinner, the adults have a ____ of coffee.", accept:["cup"] },
+      ]
+    },
+    {
+      title: "Section C · Present Simple or Present Continuous?",
+      points: 7,
+      intro:`<img class="illustration" src="images/unit1-birthday.png" alt="A waitress talking to a girl at a restaurant table with a birthday cake">
+        <p class="illustration-caption">"You usually eat pasta and salad" is done for you. Complete the waitress's questions.</p>`,
+      questions: [
+        { type:"text", prompt:"But today, you ____ sandwiches and cake. (eat)", accept:["are eating"] },
+        { type:"text", prompt:"And you always ____ water with your meal. (drink)", accept:["drink"] },
+        { type:"text", prompt:"Now you ____ orange juice. (drink)", accept:["are drinking","'re drinking"] },
+        { type:"text", prompt:"And you usually ____ trousers and a T-shirt. (wear)", accept:["wear"] },
+        { type:"text", prompt:"Today, you ____ a pretty dress. (wear)", accept:["are wearing","'re wearing"] },
+        { type:"text", prompt:"And you normally ____ at that small table by the window. (sit)", accept:["sit"] },
+        { type:"text", prompt:"But today, you ____ at the biggest table. (sit)", accept:["are sitting","'re sitting"] },
+      ]
+    },
+    {
+      title: "Section D · Harry Is Ill Today",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit1-harryill.png" alt="Four split pictures of Harry: usually playing football vs today reading a comic; eating with a fork vs eating with a spoon; doing homework at his desk vs lying in bed; drinking juice vs taking medicine">
+        <p class="illustration-caption">Harry is ill today — compare what he usually does with what he's doing today.</p>`,
+      questions: [
+        { type:"mcq", prompt:"He usually plays football. But today, he's ____.",
+          options:["reading a comic","playing football","eating breakfast","sleeping"], answer:"reading a comic" },
+        { type:"mcq", prompt:"In picture 2, what is different about Harry today?",
+          options:["He's eating with a spoon instead of a fork","He's not eating anything","He's eating a big meal","He's cooking breakfast"], answer:"He's eating with a spoon instead of a fork" },
+        { type:"mcq", prompt:"In picture 3, what is different about Harry today?",
+          options:["He's lying in bed instead of doing homework","He's watching TV","He's playing games","He's reading at his desk"], answer:"He's lying in bed instead of doing homework" },
+        { type:"mcq", prompt:"In picture 4, what is Harry doing today that he doesn't usually do?",
+          options:["Taking medicine","Playing football","Doing homework","Drinking juice"], answer:"Taking medicine" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

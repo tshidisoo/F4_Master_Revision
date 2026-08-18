@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 1 – Units 1–3</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Review 1</span>
+    <h1>Units 1–3 Review 📚</h1>
+    <p>The Food Here Is Great! · We Had a Concert · The Dinosaur Museum</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This review brings together vocabulary and grammar from Units 1, 2 and 3. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Emma Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Review 1 · Units 1–3</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Review 1 – Units 1–3 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Verbs from Units 1–3",
+      points: 6,
+      intro:`<img class="illustration" src="images/review1-sentences.png" alt="Six pictures with sentences: a dinosaur skeleton moving, an audience cheering, a scientist looking for dinosaur skin, cymbals shining in the sun, a person buying a model at the museum, and a waiter wearing a uniform">
+        <p class="illustration-caption">Read each sentence and write the underlined verb.</p>`,
+      questions: [
+        { type:"text", prompt:"The dinosaur ____!", accept:["moved"] },
+        { type:"text", prompt:"The audience ____ after the performance.", accept:["cheered"] },
+        { type:"text", prompt:"Scientists cannot ____ dinosaur skin.", accept:["find"] },
+        { type:"text", prompt:"Cymbals ____ in the sun.", accept:["shine"] },
+        { type:"text", prompt:"I ____ a model at the museum.", accept:["bought"] },
+        { type:"text", prompt:"The waiters always ____ uniforms.", accept:["wear"] },
+      ]
+    },
+    {
+      title: "Section B · Nouns from Units 1–3",
+      points: 6,
+      intro:`<p class="illustration-caption">Read each sentence and write the underlined noun.</p>`,
+      questions: [
+        { type:"text", prompt:"The ____ moved! (a large animal that lived millions of years ago)", accept:["dinosaur"] },
+        { type:"text", prompt:"The ____ cheered after the performance. (the people watching a show)", accept:["audience"] },
+        { type:"text", prompt:"Scientists cannot find dinosaur ____.", accept:["skin"] },
+        { type:"text", prompt:"____ shine in the sun. (two metal plates you crash together to make music)", accept:["cymbals"] },
+        { type:"text", prompt:"I bought a ____ at the museum. (a small copy that shows what something looks like)", accept:["model"] },
+        { type:"text", prompt:"The ____ always wear uniforms. (people who serve food at a restaurant)", accept:["waiters"] },
+      ]
+    },
+    {
+      title: "Section C · Present Simple, Past Simple or Present Continuous",
+      points: 8,
+      intro:`<p class="illustration-caption">"Yesterday, she ate sandwiches, but today, she's eating pasta" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Yesterday, she ____ (eat) sandwiches.", accept:["ate"] },
+        { type:"text", prompt:"But today, she ____ (eat) pasta.", accept:["'s eating","is eating"] },
+        { type:"text", prompt:"I usually ____ (go) to the cinema.", accept:["go"] },
+        { type:"text", prompt:"But today, I ____ (go) to the park.", accept:["'m going","am going"] },
+        { type:"text", prompt:"Last week, we ____ (buy) a kitten.", accept:["bought"] },
+        { type:"text", prompt:"And this week, we ____ (play) with it.", accept:["'re playing","are playing"] },
+        { type:"text", prompt:"I always ____ (make) cakes with my mum.", accept:["make"] },
+        { type:"text", prompt:"But today, my brother ____ (help).", accept:["'s helping","is helping"] },
+      ]
+    },
+    {
+      title: "Section D · Circle the Odd One Out",
+      points: 5,
+      intro:`<p class="illustration-caption">"rock, asteroid, Earth, fall — fall is the odd one out" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["yesterday","concert","last week","two days ago"], answer:"concert" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["bottle","salad","cup","bowl"], answer:"salad" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["toast","coconut","burst","chilli"], answer:"burst" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["plants","usually","never","always"], answer:"plants" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["went","saw","made","trumpet"], answer:"trumpet" },
+      ]
+    },
+    {
+      title: "Section E · School Activities",
+      points: 5,
+      intro:`<img class="illustration" src="images/review1-activities.png" alt="Six pictures of school activities: helping mum, eating noodles, going to the theatre, buying a coat, playing volleyball, and playing the piano">
+        <p class="illustration-caption">"(always) He always helps his mum" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"(today) Complete: She ____ noodles today. (eat)", accept:["'s eating","is eating"] },
+        { type:"text", prompt:"(yesterday) Complete: She ____ to the theatre yesterday. (go)", accept:["went"] },
+        { type:"text", prompt:"(last year) Complete: They ____ a coat last year. (buy)", accept:["bought"] },
+        { type:"text", prompt:"(sometimes) Complete: They sometimes ____ volleyball. (play)", accept:["play"] },
+        { type:"text", prompt:"(right now) Complete: She ____ the piano right now. (play)", accept:["'s playing","is playing"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

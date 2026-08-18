@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 5 · Skills Time!</span>
+    <h1>Go Back to the Roundabout 🚦</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 5: direction words, have to/has to/had to, why/because, phonics (c and ck), the shadow puppet theatre reading, and imperatives. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jamie Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 5 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 5 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Direction Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit5-directionsmap.png" alt="A map with a roundabout, a petrol station, a school, a supermarket, a swimming pool and a winding path through trees">
+        <p class="illustration-caption">"Let me look at my map" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When you get to the ____, you must turn right. (a circular junction)", accept:["roundabout"] },
+        { type:"text", prompt:"When you get to the ____, then you have to turn left. (the red/yellow/green lights)", accept:["traffic lights"] },
+        { type:"text", prompt:"Here's the school, opposite the ____. (a place where cars fill up with fuel)", accept:["petrol station"] },
+        { type:"text", prompt:"Goodbye. Don't ____! (the opposite of finding your way)", accept:["get lost"] },
+        { type:"text", prompt:"I must ____! I don't want to be late. (do something quickly)", accept:["hurry"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · have to, has to, had to",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"The light is on red. The cars ____ wait.", accept:["have to"] },
+        { type:"text", prompt:"When it rained, we ____ put up umbrellas.", accept:["had to"] },
+        { type:"text", prompt:"Now he is older, he ____ help his grandad.", accept:["has to"] },
+        { type:"text", prompt:"I don't ____ do any homework in the holidays!", accept:["have to"] },
+        { type:"text", prompt:"Yesterday, she ____ take a test to go to the new school.", accept:["had to"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Why / Because",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"Why are you late?",
+          options:["Because my alarm clock didn't ring.","Because it didn't have batteries.","Because the shop was shut."], answer:"Because my alarm clock didn't ring." },
+        { type:"mcq", prompt:"Why didn't it ring?",
+          options:["Because I didn't buy any.","Because it didn't have batteries.","Because yesterday was a holiday."], answer:"Because it didn't have batteries." },
+        { type:"mcq", prompt:"Why didn't you buy any?",
+          options:["Because the shop was shut.","Because yesterday was a holiday.","Because it didn't have batteries."], answer:"Because the shop was shut." },
+        { type:"text", prompt:"Why are you tired? Because I ____.", accept:["read until late","read late"] },
+        { type:"text", prompt:"Because I ____ a race. (why you're happy)", accept:["won"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — c or ck?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"du__ (a bird that swims on ponds)",
+          options:["c","ck"], answer:"ck" },
+        { type:"mcq", prompt:"clo__ (it tells you the time)",
+          options:["c","ck"], answer:"ck" },
+        { type:"mcq", prompt:"plasti__ (a material used to make bottles)",
+          options:["c","ck"], answer:"c" },
+        { type:"mcq", prompt:"picni__ (a meal you eat outside)",
+          options:["c","ck"], answer:"c" },
+        { type:"mcq", prompt:"ne__ (part of your body between your head and shoulders)",
+          options:["c","ck"], answer:"ck" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Shadow Puppet Theatre",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit5-acrossicons.png" alt="Pictures for a crossword: a person walking with a shadow, a stick, a group of friends, and a fireworks concert poster">
+        <p class="illustration-caption">"You shouldn't touch the computer screen" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"The winners of the match ____ their trophy high above their heads.", accept:["lifted"] },
+        { type:"text", prompt:"You can make the puppet move using a ____ on its back.", accept:["stick"] },
+        { type:"text", prompt:"You use your ____ to talk or sing.", accept:["voice"] },
+        { type:"text", prompt:"You can make a ____ with your hands, a bright light and a white wall.", accept:["shadow"] },
+        { type:"text", prompt:"When something special happens, like a concert, we call it an ____.", accept:["event"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Writing — Imperatives",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit5-imperatives.png" alt="Five pictures: turning on a lamp, a boy standing in front of a wall, a stationary bird-shaped hand shadow, a moving bird-shaped hand shadow, and a person with a red X over their body">
+        <p class="illustration-caption">"1 Turn on a bright light" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"\"Turn on a bright light.\" — is this an imperative sentence?",
+          options:["Yes","No"], answer:"Yes" },
+        { type:"mcq", prompt:"\"It is a shadow puppet party.\" — is this an imperative sentence?",
+          options:["Yes","No"], answer:"No" },
+        { type:"mcq", prompt:"\"Turn left at the petrol station.\" — is this an imperative sentence?",
+          options:["Yes","No"], answer:"Yes" },
+        { type:"mcq", prompt:"\"The theatre is on the left, opposite the swimming pool.\" — is this an imperative sentence?",
+          options:["Yes","No"], answer:"No" },
+        { type:"mcq", prompt:"According to the invitation, where is the theatre?",
+          options:["Opposite the swimming pool","Opposite the petrol station","Next to the school"], answer:"Opposite the swimming pool" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

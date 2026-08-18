@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 – Lessons 3 &amp; 4 | The Dinosaur Museum</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 3</span>
+    <h1>The Dinosaur Museum 🦴</h1>
+    <p>Lessons 3 &amp; 4 — Past Simple Questions &amp; Phonics: f and ph Spellings</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Robbie Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 3 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 3 – Lessons 3 & 4 (Past simple questions; phonics: f and ph spellings)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Grammar — Past Simple Questions",
+      points: 6,
+      intro:`<p class="illustration-caption">"Did you go out yesterday? → Yes, I did." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Did you go out yesterday?",
+          options:["Yes, I did.","No, we didn't. We went home.","I went with my grandma and my cousins."], answer:"Yes, I did." },
+        { type:"mcq", prompt:"Where did you go?",
+          options:["I went to a clothes shop.","The one called Style.","I bought a new coat and hat."], answer:"I went to a clothes shop." },
+        { type:"mcq", prompt:"Which one did you go to?",
+          options:["I went to a clothes shop.","The one called Style.","Yes, I did."], answer:"The one called Style." },
+        { type:"mcq", prompt:"What did you buy?",
+          options:["I bought a new coat and hat.","I went with my grandma and my cousins.","No, we didn't. We went home."], answer:"I bought a new coat and hat." },
+        { type:"mcq", prompt:"Who did you go with?",
+          options:["I went with my grandma and my cousins.","The one called Style.","Yes, I did."], answer:"I went with my grandma and my cousins." },
+        { type:"mcq", prompt:"Did you eat in a restaurant?",
+          options:["No, we didn't. We went home.","Yes, I did.","I bought a new coat and hat."], answer:"No, we didn't. We went home." },
+      ]
+    },
+    {
+      title: "Section B · Complete the Questions and Answers",
+      points: 8,
+      intro:`<p class="illustration-caption">"Who did you see yesterday? I saw Robbie and Simon." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"____ did you see them? (question word)", accept:["where"] },
+        { type:"text", prompt:"I saw them at the ____.", accept:["park"] },
+        { type:"text", prompt:"____ park was it? (question word)", accept:["which"] },
+        { type:"text", prompt:"It ____ Sunnyside Park.", accept:["was"] },
+        { type:"text", prompt:"____ did you do? (question word)", accept:["what"] },
+        { type:"text", prompt:"We ____ basketball.", accept:["played"] },
+        { type:"text", prompt:"____ you have a good time? (question word)", accept:["did"] },
+        { type:"text", prompt:"Yes, I ____.", accept:["did"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — f or ph?",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit3-phonics.png" alt="Six pictures: a scarf, a telephone, a family photo, a foot, a flamingo, and an alphabet book showing letters A and B">
+        <p class="illustration-caption">"scarf — f" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"telephone",
+          options:["ph","f"], answer:"ph" },
+        { type:"mcq", prompt:"photo",
+          options:["ph","f"], answer:"ph" },
+        { type:"mcq", prompt:"alphabet",
+          options:["ph","f"], answer:"ph" },
+        { type:"mcq", prompt:"foot",
+          options:["ph","f"], answer:"f" },
+        { type:"mcq", prompt:"flamingo",
+          options:["ph","f"], answer:"f" },
+        { type:"mcq", prompt:"elephant",
+          options:["ph","f"], answer:"f" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 – Lessons 1 &amp; 2 | We Had a Concert</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 2</span>
+    <h1>We Had a Concert 🎻</h1>
+    <p>Lessons 1 &amp; 2 — Concert Words &amp; Past Simple (was/were/-ed)</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jasmine Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 2 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 2 – Lessons 1 & 2 (Concert words; was/were and regular past -ed)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · At the Concert — Words (Part 1)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-instruments.png" alt="Ten numbered pictures: a singer on a stage with an audience, drums, a violin, a set of instruments, two people cheering, a recorder, an audience clapping, a stage with curtains, a programme, and a trumpet">
+        <p class="illustration-caption">"We had a concert at our school" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"My name is Jasmine. We had a concert at our school. The parents were the ____. (they watch the concert)", accept:["audience"] },
+        { type:"text", prompt:"Each parent had a ____ to read. (tells you about the concert)", accept:["programme"] },
+        { type:"text", prompt:"We were on a ____. (children perform here)", accept:["stage"] },
+        { type:"text", prompt:"Each child had a musical ____. (something you play to make music)", accept:["instrument"] },
+        { type:"text", prompt:"At the concert, the children play their instruments on a stage/____. (where they perform)", accept:["stage"] },
+      ]
+    },
+    {
+      title: "Section B · At the Concert — Who Played What?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit2-band.png" alt="Sam, Jasmine, Joe and Monica performing on stage: Sam plays the trumpet, Jasmine plays the violin, Joe plays the drums, and Monica plays the recorder">
+        <p class="illustration-caption">Look at the picture. Who played which instrument?</p>`,
+      questions: [
+        { type:"text", prompt:"I played the ____. (Jasmine's instrument)", accept:["violin"] },
+        { type:"text", prompt:"Sam played the ____.", accept:["trumpet"] },
+        { type:"text", prompt:"Monica played the ____.", accept:["recorder"] },
+        { type:"text", prompt:"Joe played the ____.", accept:["drums"] },
+        { type:"text", prompt:"At the end of the concert, all the parents ____. (clapped loudly and shouted happily)", accept:["cheered","cheer"] },
+      ]
+    },
+    {
+      title: "Section C · Grammar — Usually vs Yesterday",
+      points: 6,
+      intro:`<p class="illustration-caption">Complete each sentence about what really happened yesterday.</p>`,
+      questions: [
+        { type:"mcq", prompt:"1 I normally have breakfast in the kitchen. → But yesterday, I ____.",
+          options:["stayed in bed","walked to the doctor's","was ill"], answer:"stayed in bed" },
+        { type:"mcq", prompt:"2 My mum usually cooks breakfast. → But yesterday, ____.",
+          options:["my grandpa cooked it","I stayed in bed","we were at home all day"], answer:"my grandpa cooked it" },
+        { type:"mcq", prompt:"3 We usually walk to school. → But yesterday, ____.",
+          options:["we walked to the doctor's","we played chess","I was ill"], answer:"we walked to the doctor's" },
+        { type:"mcq", prompt:"4 I am usually well. → But yesterday, ____.",
+          options:["I was ill","I stayed in bed","my grandpa cooked it"], answer:"I was ill" },
+        { type:"mcq", prompt:"5 I usually go to school. → But yesterday, ____.",
+          options:["we were at home all day","we walked to the doctor's","I played chess with my grandpa"], answer:"we were at home all day" },
+        { type:"mcq", prompt:"6 I usually play sports after school. → But yesterday, ____.",
+          options:["I played chess with my grandpa","I was ill","my grandpa cooked it"], answer:"I played chess with my grandpa" },
+      ]
+    },
+    {
+      title: "Section D · Jamie's Saturday — Past Simple",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit2-jamie.png" alt="Jamie and his friend Mike playing football in the park">
+        <p class="illustration-caption">"Jamie and his friend Mike played football in the park for two hours" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"After the game, they ____ hungry. (be)", accept:["were"] },
+        { type:"text", prompt:"After lunch, Jamie ____ tired. (be)", accept:["was"] },
+        { type:"text", prompt:"They finished their lunch and ____ home together. (walk)", accept:["walked"] },
+        { type:"text", prompt:"Then he ____ TV. (watch)", accept:["watched"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

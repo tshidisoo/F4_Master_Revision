@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 – Lessons 1 &amp; 2 | How Much Time Have We Got?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 8</span>
+    <h1>How Much Time Have We Got? ✈️</h1>
+    <p>Lessons 1 &amp; 2 — Airport Words &amp; Countable/Uncountable Nouns</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Martha Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 8 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 8 – Lessons 1 & 2 (Airport words; countable/uncountable nouns, how much/how many)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Airport Words",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit8-airportitems.png" alt="Ten airport items: a passport and coins, a passenger walking, people at departures, a departures sign, a suitcase, a passport, luggage, a car sign, a newspaper, and coins">
+        <p class="illustration-caption">"Luggage is all the bags you take on holiday" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Your ____ is a little book with your name, photo and information about where you are from.", accept:["passport"] },
+        { type:"text", prompt:"You read a ____ to see what is happening in the world.", accept:["newspaper"] },
+        { type:"text", prompt:"When you are going on holiday, you go through ____ at the airport.", accept:["departures"] },
+        { type:"text", prompt:"When your plane lands, you go through ____.", accept:["arrivals"] },
+        { type:"text", prompt:"____ are money in the shape of circles.", accept:["coins"] },
+        { type:"text", prompt:"A ____ is a person who travels on a plane.", accept:["passenger"] },
+      ]
+    },
+    {
+      title: "Section B · At the Airport",
+      points: 4,
+      intro:`<p class="illustration-caption">"We are at the airport and going on holiday. Dad is waiting in a line with our luggage." is done for you. Complete the rest of the story.</p>`,
+      questions: [
+        { type:"text", prompt:"All the bags you take on holiday are called your ____.", accept:["luggage"] },
+        { type:"text", prompt:"We've got four ____ and two bags.", accept:["suitcases","suitcase"] },
+        { type:"text", prompt:"Grandma is changing ____ to spend on holiday.", accept:["money"] },
+        { type:"text", prompt:"My sister wants to buy a ____ in the shop.", accept:["magazine"] },
+      ]
+    },
+    {
+      title: "Section C · Countable or Uncountable?",
+      points: 6,
+      questions: [
+        { type:"mcq", prompt:"money", options:["Countable","Uncountable"], answer:"Uncountable" },
+        { type:"mcq", prompt:"time", options:["Countable","Uncountable"], answer:"Uncountable" },
+        { type:"mcq", prompt:"magazine", options:["Countable","Uncountable"], answer:"Countable" },
+        { type:"mcq", prompt:"coin", options:["Countable","Uncountable"], answer:"Countable" },
+        { type:"mcq", prompt:"luggage", options:["Countable","Uncountable"], answer:"Uncountable" },
+        { type:"mcq", prompt:"suitcase", options:["Countable","Uncountable"], answer:"Countable" },
+      ]
+    },
+    {
+      title: "Section D · How Much or How Many?",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit8-howmuchhowmany.png" alt="Six airport scenes: checking in suitcases, changing money, weighing luggage, showing passports, eating food, and buying magazines">
+        <p class="illustration-caption">"(suitcase) How many suitcases have you got?" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"____ money have you got? (I've got £100.)",
+          options:["How much","How many"], answer:"How much" },
+        { type:"mcq", prompt:"____ suitcases have you got? (I've got three.)",
+          options:["How much","How many"], answer:"How many" },
+        { type:"mcq", prompt:"____ food have you got? (We've got four sandwiches and lots of fruit.)",
+          options:["How much","How many"], answer:"How much" },
+        { type:"mcq", prompt:"____ magazines have you got? (I've got two.)",
+          options:["How much","How many"], answer:"How many" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

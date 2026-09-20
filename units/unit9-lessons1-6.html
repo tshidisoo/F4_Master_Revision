@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 9 · Skills Time!</span>
+    <h1>Something New to Watch! 📺</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 9: TV words, the infinitive of purpose, how often...?, phonics (er and or endings), reading, and the prefix un-. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Bart Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 9 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 9 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · TV Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit9-tvwords.png" alt="A TV screen surrounded by a word-snake spelling: mobile, documentary, camcorder, news, radio, channel, advert, programmes, cartoon, control">
+        <p class="illustration-caption">"When you switch on the TV, you can see lots of different programmes" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"There are lots of these on your TV. You choose one using your remote control.", accept:["channels","channel"] },
+        { type:"text", prompt:"To change the channel on the TV, you can use a remote ____.", accept:["control"] },
+        { type:"text", prompt:"You can use this camera to make films.", accept:["camcorder"] },
+        { type:"text", prompt:"This tells you about things you can buy.", accept:["advert"] },
+        { type:"text", prompt:"This TV programme gives you information.", accept:["documentary"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · The Infinitive of Purpose",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit9-infinitive.png" alt="Six scenes: a boy entering the living room, a girl watching a space documentary, two children cycling, a girl using a dictionary, two people washing vegetables, and a boy at a supermarket ice cream stand">
+        <p class="illustration-caption">"I went to the living room to watch TV" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"My dad used the camcorder to film our party. Write the infinitive phrase.", accept:["to film"] },
+        { type:"text", prompt:"I phoned my grandma to say, \"Happy birthday.\" Write the infinitive phrase.", accept:["to say"] },
+        { type:"mcq", prompt:"She's watching this documentary ____.",
+          options:["to learn about space","to buy a ticket","to play a game"], answer:"to learn about space" },
+        { type:"mcq", prompt:"They went to the park ____.",
+          options:["to ride their bikes","to buy vegetables","to watch a film"], answer:"to ride their bikes" },
+        { type:"mcq", prompt:"He went to the supermarket ____.",
+          options:["to buy ice cream","to ride a bike","to phone his grandma"], answer:"to buy ice cream" },
+      ]
+    },
+    {
+      title: "Lesson 3 · How Often...?",
+      points: 5,
+      intro:`<p class="illustration-caption">"How often does she go swimming? She goes swimming once a week." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"He visits his cousins twice a year. What was the question?",
+          options:["How often does he visit his cousins?","How much does he visit his cousins?","How many cousins does he visit?"],
+          answer:"How often does he visit his cousins?" },
+        { type:"mcq", prompt:"They study English every day. What was the question?",
+          options:["How often do they study English?","How much English do they study?","What time do they study English?"],
+          answer:"How often do they study English?" },
+        { type:"mcq", prompt:"Which phrase means 'zero times, not ever'?",
+          options:["always","never","sometimes"], answer:"never" },
+        { type:"mcq", prompt:"Which phrase means 'one time every week'?",
+          options:["once a week","twice a week","every day"], answer:"once a week" },
+        { type:"mcq", prompt:"She goes on holiday once a year. What was the question?",
+          options:["How often does she go on holiday?","How long is her holiday?","Where does she go on holiday?"],
+          answer:"How often does she go on holiday?" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — er or or?",
+      points: 5,
+      intro:`<p class="illustration-caption">"actor, visitor, mother, motor — mother is the odd one out" is done for you (it ends in -er, not -or). Which ending does each word have?</p>`,
+      questions: [
+        { type:"mcq", prompt:"sister", options:["er","or"], answer:"er" },
+        { type:"mcq", prompt:"mirror", options:["er","or"], answer:"or" },
+        { type:"mcq", prompt:"winter", options:["er","or"], answer:"er" },
+        { type:"mcq", prompt:"visitor", options:["er","or"], answer:"or" },
+        { type:"mcq", prompt:"actor", options:["er","or"], answer:"or" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Anagram Words",
+      points: 5,
+      intro:`<p class="illustration-caption">"Bart sometimes plays tricks on his sister" is done for you. Unscramble the letters to find each word.</p>`,
+      questions: [
+        { type:"text", prompt:"A very big, tall person. (n a i t g)", accept:["giant"] },
+        { type:"text", prompt:"To take something without asking. (l s a t e)", accept:["steal"] },
+        { type:"text", prompt:"The start of a football match. (c k k i - f o f)", accept:["kick-off","kickoff"] },
+        { type:"text", prompt:"In this film there is a ____. He is very bad. (i v l a i n l)", accept:["villain"] },
+        { type:"text", prompt:"Round, sweet food. (d g u n o h t u)", accept:["doughnut","donut"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · The Prefix un-",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit9-tvguide.png" alt="A Saturday TV guide showing a cartoon, a film, the news and a documentary, with several words starting with the prefix un- circled">
+        <p class="illustration-caption">"I didn't find the golden ticket. I was unlucky" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"My head hurts. I feel ____.", accept:["unwell"] },
+        { type:"text", prompt:"This bed is very hard. It is ____.", accept:["uncomfortable"] },
+        { type:"text", prompt:"I'm feeling ____ because I've lost my favourite hat.", accept:["unhappy"] },
+        { type:"text", prompt:"When a day is not like other days, it is ____.", accept:["unusual"] },
+        { type:"text", prompt:"A TV programme that people do not like is ____.", accept:["unpopular"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

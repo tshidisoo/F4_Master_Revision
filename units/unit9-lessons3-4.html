@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9 – Lessons 3 &amp; 4 | Something New to Watch!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 9</span>
+    <h1>Something New to Watch! 📺</h1>
+    <p>Lessons 3 &amp; 4 — How Often...? &amp; Phonics: er and or Endings</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Fido Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 9 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 9 – Lessons 3 & 4 (How often...?; phonics: er and or endings)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · How Often...? Write the Question",
+      points: 5,
+      intro:`<p class="illustration-caption">"How often does she go swimming? She goes swimming once a week." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"He visits his cousins twice a year. What was the question?",
+          options:["How often does he visit his cousins?","How much does he visit his cousins?","How many cousins does he visit?"],
+          answer:"How often does he visit his cousins?" },
+        { type:"mcq", prompt:"They study English every day. What was the question?",
+          options:["How often do they study English?","How much English do they study?","What time do they study English?"],
+          answer:"How often do they study English?" },
+        { type:"mcq", prompt:"He never uses a camcorder. He hasn't got one. What was the question?",
+          options:["How often does he use a camcorder?","How much does a camcorder cost?","Where is his camcorder?"],
+          answer:"How often does he use a camcorder?" },
+        { type:"mcq", prompt:"I play volleyball twice a week. What was the question?",
+          options:["How often do you play volleyball?","How well do you play volleyball?","Who do you play volleyball with?"],
+          answer:"How often do you play volleyball?" },
+        { type:"mcq", prompt:"She goes on holiday once a year. What was the question?",
+          options:["How often does she go on holiday?","How long is her holiday?","Where does she go on holiday?"],
+          answer:"How often does she go on holiday?" },
+      ]
+    },
+    {
+      title: "Section B · How Often Do You...?",
+      points: 4,
+      questions: [
+        { type:"mcq", prompt:"Which phrase means 'one time every week'?",
+          options:["once a week","twice a week","every day"], answer:"once a week" },
+        { type:"mcq", prompt:"Which phrase means 'zero times, not ever'?",
+          options:["always","never","sometimes"], answer:"never" },
+        { type:"mcq", prompt:"Which phrase means 'two times every year'?",
+          options:["twice a year","twice a week","once a year"], answer:"twice a year" },
+        { type:"mcq", prompt:"Which phrase means 'one time every day'?",
+          options:["once a day","once a week","once a year"], answer:"once a day" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — er or or?",
+      points: 5,
+      intro:`<p class="illustration-caption">"actor, visitor, mother, motor — mother is the odd one out" is done for you (it ends in -er, not -or). Which ending does each word have?</p>`,
+      questions: [
+        { type:"mcq", prompt:"sister", options:["er","or"], answer:"er" },
+        { type:"mcq", prompt:"mirror", options:["er","or"], answer:"or" },
+        { type:"mcq", prompt:"winter", options:["er","or"], answer:"er" },
+        { type:"mcq", prompt:"visitor", options:["er","or"], answer:"or" },
+        { type:"mcq", prompt:"actor", options:["er","or"], answer:"or" },
+      ]
+    },
+    {
+      title: "Section D · er and or Words",
+      points: 6,
+      questions: [
+        { type:"text", prompt:"A male parent is called a ____.", accept:["father"] },
+        { type:"text", prompt:"A person who helps you when you are sick is a ____.", accept:["doctor"] },
+        { type:"text", prompt:"The tenth month of the year is ____.", accept:["october"] },
+        { type:"text", prompt:"A person who writes books is an ____.", accept:["author"] },
+        { type:"text", prompt:"A female parent is called a ____.", accept:["mother"] },
+        { type:"text", prompt:"A person who comes to see you is called a ____.", accept:["visitor"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

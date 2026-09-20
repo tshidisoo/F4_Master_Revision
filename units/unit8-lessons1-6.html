@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 8 · Skills Time!</span>
+    <h1>How Much Time Have We Got? ✈️</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 8: airport words, countable/uncountable nouns, some/any, phonics (-ed endings), reading a story, and writing a letter. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Martha Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 8 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 8 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Airport Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit8-airportitems.png" alt="Ten airport items: a passport and coins, a passenger walking, people at departures, a departures sign, a suitcase, a passport, luggage, a car sign, a newspaper, and coins">
+        <p class="illustration-caption">"Luggage is all the bags you take on holiday" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"You pack your holiday clothes into a big bag called a ____.", accept:["suitcase"] },
+        { type:"text", prompt:"____ are money in the shape of circles.", accept:["coins"] },
+        { type:"text", prompt:"You can read a ____ at the airport before you get on the plane.", accept:["magazine"] },
+        { type:"text", prompt:"A ____ is a person who travels on a plane.", accept:["passenger"] },
+        { type:"text", prompt:"When your plane lands, you go through ____.", accept:["arrivals"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Countable/Uncountable & How Much/How Many",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit8-howmuchhowmany.png" alt="Six airport scenes: checking in suitcases, changing money, weighing luggage, showing passports, eating food, and buying magazines">
+        <p class="illustration-caption">"(suitcase) How many suitcases have you got?" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"time", options:["Countable","Uncountable"], answer:"Uncountable" },
+        { type:"mcq", prompt:"suitcase", options:["Countable","Uncountable"], answer:"Countable" },
+        { type:"mcq", prompt:"____ luggage have you got?", options:["How much","How many"], answer:"How much" },
+        { type:"mcq", prompt:"____ passports have you got?", options:["How much","How many"], answer:"How many" },
+        { type:"text", prompt:"\"Hurry up,\" says Dad. \"We haven't got ____ time. The plane leaves in five minutes.\"", accept:["much"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Some or Any?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit8-shop.png" alt="A mum and her son at a shop counter, buying food from a shopkeeper">
+        <p class="illustration-caption">"Boy: Have you got any bread?" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Have you got ____ potatoes?", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"We'll have ____ carrots, please.", options:["some","any"], answer:"some" },
+        { type:"mcq", prompt:"We don't want ____ fish.", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"Have you got ____ cheese?", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"Yes, we have got ____ cheese.", options:["some","any"], answer:"some" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — Past Simple -ed Endings",
+      points: 5,
+      intro:`<p class="illustration-caption">"waited" ends in the /id/ sound — that one's done for you. Choose the correct end sound for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"showed", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"played", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"tidied", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"washed", options:["t","id","d"], answer:"t" },
+        { type:"mcq", prompt:"walked", options:["t","id","d"], answer:"t" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — A Journey by Train",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit8-trainfamily.png" alt="A family sitting on a train, looking out of the window">
+        <p class="illustration-caption">"Where did they go for their holiday? Cornwall." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Did they fall asleep on the train?",
+          options:["Yes.","No."], answer:"No." },
+        { type:"mcq", prompt:"Why did they wake up?",
+          options:["They heard a whistle.","They heard music.","The train stopped suddenly."], answer:"They heard a whistle." },
+        { type:"mcq", prompt:"What time was it?",
+          options:["8 o'clock.","9 o'clock.","10 o'clock."], answer:"8 o'clock." },
+        { type:"mcq", prompt:"Where did they stay?",
+          options:["At a campsite.","At a hotel.","At their grandma's."], answer:"At a hotel." },
+        { type:"mcq", prompt:"What was at the town?",
+          options:["A festival and a fair.","A concert.","A museum."], answer:"A festival and a fair." },
+      ]
+    },
+    {
+      title: "Lesson 6 · Addressing Envelopes and Writing a Letter",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit8-holidayfamily.png" alt="A family of four standing together, dressed for the beach">
+        <p class="illustration-caption">An envelope is addressed to Martha Lewis, 472 High Street, Oxford, AL3 86B. "Martha Lewis" is written first — put the rest of the lines in order.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which line comes straight after the name?",
+          options:["472 High Street","Oxford","AL3 86B"], answer:"472 High Street" },
+        { type:"mcq", prompt:"Which line comes last?",
+          options:["472 High Street","Oxford","AL3 86B"], answer:"AL3 86B" },
+        { type:"text", prompt:"We went by ____. It was my first time and I was really excited.", accept:["plane"] },
+        { type:"text", prompt:"We stayed in a ____ near the beach.", accept:["hotel"] },
+        { type:"text", prompt:"We swam in the ____ and the sea every day.", accept:["pool"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

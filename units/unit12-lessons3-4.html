@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12 – Lessons 3 &amp; 4 | What's the Matter?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 12</span>
+    <h1>What's the Matter? 🤒</h1>
+    <p>Lessons 3 &amp; 4 — Could/Couldn't, Can/Can't &amp; Phonics: le and al</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Julia Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 12 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 12 – Lessons 3 & 4 (Could/couldn't, can/can't; phonics: le and al)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Could, Couldn't, Can, Can't",
+      points: 4,
+      intro:`<p class="illustration-caption">"Nine years ago, I was a happy baby..." Complete the story about what a baby could and couldn't do.</p>`,
+      questions: [
+        { type:"text", prompt:"When I was a baby, I ____ walk or talk.", accept:["couldn't"] },
+        { type:"text", prompt:"But I ____ sleep and play every day.", accept:["could"] },
+        { type:"text", prompt:"Now I have to go to school every day, so I ____ play all day anymore.", accept:["can't"] },
+        { type:"text", prompt:"But now I ____ ride a bike, swim and speak two languages.", accept:["can"] },
+      ]
+    },
+    {
+      title: "Section B · 200 Years Ago",
+      points: 4,
+      questions: [
+        { type:"mcq", prompt:"200 years ago, people could ____.", options:["write with a feather","use a computer","watch TV"], answer:"write with a feather" },
+        { type:"mcq", prompt:"200 years ago, people could go to school by ____.", options:["horse and cart","car","plane"], answer:"horse and cart" },
+        { type:"mcq", prompt:"200 years ago, people couldn't ____.", options:["use a computer","write with a feather","go to school by horse and cart"], answer:"use a computer" },
+        { type:"mcq", prompt:"200 years ago, people couldn't ____.", options:["watch TV","write with a feather","go to school by horse and cart"], answer:"watch TV" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — le or al?",
+      points: 6,
+      intro:`<p class="illustration-caption">Choose the correct ending for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"castle", options:["le","al"], answer:"le" },
+        { type:"mcq", prompt:"table", options:["le","al"], answer:"le" },
+        { type:"mcq", prompt:"hospital", options:["le","al"], answer:"al" },
+        { type:"mcq", prompt:"sandal", options:["le","al"], answer:"al" },
+        { type:"mcq", prompt:"candle", options:["le","al"], answer:"le" },
+        { type:"mcq", prompt:"people", options:["le","al"], answer:"le" },
+      ]
+    },
+    {
+      title: "Section D · le and al Words",
+      points: 6,
+      questions: [
+        { type:"text", prompt:"A large old building where a king or queen might live.", accept:["castle"] },
+        { type:"text", prompt:"A piece of furniture you eat dinner on.", accept:["table"] },
+        { type:"text", prompt:"A place where doctors and nurses treat sick people.", accept:["hospital"] },
+        { type:"text", prompt:"A type of open shoe you wear in summer.", accept:["sandal"] },
+        { type:"text", prompt:"A stick of wax with a wick that you burn for light.", accept:["candle"] },
+        { type:"text", prompt:"The plural of \"person\" is ____.", accept:["people"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

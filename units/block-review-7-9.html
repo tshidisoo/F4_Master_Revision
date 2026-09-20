@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 3 – Units 7–9</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Review 3</span>
+    <h1>Units 7–9 Review 📚</h1>
+    <p>Will It Really Happen? · How Much Time Have We Got? · Something New to Watch! · Fluency Time 3</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This review brings together Fluency Time 3 (choosing TV programmes) and vocabulary/grammar from Units 7, 8 and 9. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Tilly Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Review 3 · Units 7–9</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Review 3 – Units 7–9 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Fluency Time 3 — Choosing a TV Programme",
+      points: 6,
+      intro:`<img class="illustration" src="images/review3-tvpanels.png" alt="Two panels: Peter and Tilly watching a cat film on TV, then trying Channel 4 to watch a documentary about dinosaurs">
+        <p class="illustration-caption">"Peter: I'm tired." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Peter: What's ____ TV?", accept:["on"] },
+        { type:"text", prompt:"Tilly: A film about cats. I can't ____ this film.", accept:["stand"] },
+        { type:"text", prompt:"Peter: I saw that film last week. Let's ____ the channel.", accept:["change"] },
+        { type:"text", prompt:"Tilly: OK. ____ me the remote control, please.", accept:["pass"] },
+        { type:"text", prompt:"Peter: There are usually good programmes on ____ 4.", accept:["channel"] },
+        { type:"text", prompt:"Peter: A ____ about dinosaurs.", accept:["documentary"] },
+      ]
+    },
+    {
+      title: "Section B · Fluency Time 3 — Rewrite the Sentence",
+      points: 3,
+      intro:`<p class="illustration-caption">"I can't stand adverts. → I can't stand documentaries." is done for you. Rewrite each sentence using the new word(s).</p>`,
+      questions: [
+        { type:"text", prompt:"I love the news. (rewrite using \"this film\")", accept:["i love this film"] },
+        { type:"text", prompt:"There are usually good programmes on Channel 4. (rewrite using \"cartoons\" and \"Channel 9\")", accept:["there are usually good cartoons on channel 9"] },
+        { type:"text", prompt:"I can't stand this film. (rewrite using \"programme\")", accept:["i can't stand this programme","i cant stand this programme"] },
+      ]
+    },
+    {
+      title: "Section C · Verbs, Adjectives and Nouns (Units 7–9)",
+      points: 5,
+      intro:`<p class="illustration-caption">"He will travel by rocket to planets far away" — travel (a verb) is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"rocket — is this a verb, an adjective, or a noun?", options:["Verb","Adjective","Noun"], answer:"Noun" },
+        { type:"mcq", prompt:"unusual — is this a verb, an adjective, or a noun?", options:["Verb","Adjective","Noun"], answer:"Adjective" },
+        { type:"mcq", prompt:"cartoon — is this a verb, an adjective, or a noun?", options:["Verb","Adjective","Noun"], answer:"Noun" },
+        { type:"mcq", prompt:"played — is this a verb, an adjective, or a noun?", options:["Verb","Adjective","Noun"], answer:"Verb" },
+        { type:"mcq", prompt:"disappointed — is this a verb, an adjective, or a noun?", options:["Verb","Adjective","Noun"], answer:"Adjective" },
+      ]
+    },
+    {
+      title: "Section D · Circle the Odd One Out",
+      points: 6,
+      intro:`<p class="illustration-caption">"magazine" is the odd one out in "rocket, astronaut, satellite, magazine" — the others are all things you find in space.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which is the odd one out?", options:["passport","robot","luggage","suitcase"], answer:"robot" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["TV","camcorder","coin","mobile phone"], answer:"coin" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["kick-off","giant","game","stadium"], answer:"giant" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["radio","the sun","the moon","planets"], answer:"radio" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["cartoon","documentary","the news","hotel"], answer:"hotel" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["rocket","astronaut","satellite","magazine"], answer:"magazine" },
+      ]
+    },
+    {
+      title: "Section E · How Often Does Laura Have...?",
+      points: 4,
+      intro:`<p class="illustration-caption">Laura's timetable: Day 1: English, maths · Day 2: English, PE, science · Day 3: English, maths, art · Day 4: English, maths, science · Day 5: English, PE, music. "How often does Laura have music? She has music once a week." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"How often does she have English?", options:["every day","three times a week","twice a week","never"], answer:"every day" },
+        { type:"mcq", prompt:"How often does she have maths?", options:["every day","three times a week","twice a week","never"], answer:"three times a week" },
+        { type:"mcq", prompt:"How often does she have science?", options:["every day","three times a week","twice a week","never"], answer:"twice a week" },
+        { type:"mcq", prompt:"How often does she have Spanish?", options:["every day","three times a week","twice a week","never"], answer:"never" },
+      ]
+    },
+    {
+      title: "Section F · The Infinitive of Purpose",
+      points: 3,
+      intro:`<p class="illustration-caption">"I'm buying tomatoes and cucumber to make a salad" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"I'm going to the shop ____ a newspaper.", accept:["to buy"] },
+        { type:"text", prompt:"Jack went to the park ____ football.", accept:["to play"] },
+        { type:"text", prompt:"I bought this book ____ at home.", accept:["to read"] },
+      ]
+    },
+    {
+      title: "Section G · Phonics — Past Simple -ed Endings",
+      points: 3,
+      intro:`<p class="illustration-caption">"Yesterday, after I finished my homework, I tidied my room..." Choose the correct end sound for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"walked", options:["t","id","d"], answer:"t" },
+        { type:"mcq", prompt:"painted", options:["t","id","d"], answer:"id" },
+        { type:"mcq", prompt:"rained", options:["t","id","d"], answer:"d" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

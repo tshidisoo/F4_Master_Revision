@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 – Lessons 3 &amp; 4 | How Much Time Have We Got?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 8</span>
+    <h1>How Much Time Have We Got? ✈️</h1>
+    <p>Lessons 3 &amp; 4 — Some/Any &amp; Phonics: Past Simple -ed Endings</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Mum Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 8 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 8 – Lessons 3 & 4 (Some/any; phonics: past simple -ed endings)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Some or Any? (At the Shop)",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit8-shop.png" alt="A mum and her son at a shop counter, buying food from a shopkeeper">
+        <p class="illustration-caption">"Boy: Have you got any bread?" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"We haven't got ____ bread now.", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"But we have got ____ cakes.", options:["some","any"], answer:"some" },
+        { type:"mcq", prompt:"No, thank you. We don't want ____ cakes.", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"Have you got ____ potatoes?", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"But we have got ____ carrots.", options:["some","any"], answer:"some" },
+        { type:"mcq", prompt:"OK. We'll have ____ carrots, please.", options:["some","any"], answer:"some" },
+      ]
+    },
+    {
+      title: "Section B · Some or Any? (Continued)",
+      points: 6,
+      questions: [
+        { type:"mcq", prompt:"Have you got ____ meat?", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"We haven't got ____ meat. It's all gone.", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"But how about ____ fish?", options:["some","any"], answer:"some" },
+        { type:"mcq", prompt:"No. We don't want ____ fish.", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"Have you got ____ cheese?", options:["some","any"], answer:"any" },
+        { type:"mcq", prompt:"Yes, we have got ____ cheese.", options:["some","any"], answer:"some" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — Past Simple -ed Endings",
+      points: 5,
+      intro:`<p class="illustration-caption">"waited" ends in the /id/ sound — that one's done for you. Choose the correct end sound for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"showed", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"played", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"tidied", options:["t","id","d"], answer:"d" },
+        { type:"mcq", prompt:"washed", options:["t","id","d"], answer:"t" },
+        { type:"mcq", prompt:"walked", options:["t","id","d"], answer:"t" },
+      ]
+    },
+    {
+      title: "Section D · Past Simple -ed Words",
+      points: 3,
+      questions: [
+        { type:"text", prompt:"Yesterday it ____ (rain) all day, so we stayed inside.", accept:["rained"] },
+        { type:"text", prompt:"She ____ (paint) a beautiful picture of the sunset.", accept:["painted"] },
+        { type:"text", prompt:"We ____ (finish) our homework before dinner.", accept:["finished"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

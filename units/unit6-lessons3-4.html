@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6 – Lessons 3 &amp; 4 | The Best Bed!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 6</span>
+    <h1>The Best Bed! 🛏️</h1>
+    <p>Lessons 3 &amp; 4 — Irregular Comparatives/Superlatives &amp; Phonics: Soft c and Soft g</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Henry Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 6 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 6 – Lessons 3 & 4 (Irregular comparatives/superlatives; phonics: soft c and soft g)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Football League — Good, Better, Best / Bad, Worse, Worst",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit6-football.png" alt="Five footballs stacked next to a list of six football teams">
+        <p class="illustration-caption">Greenfield school has six football teams. The blue team is good. The red team is better than the blue team. The green team is the best of all. The orange team is bad. The purple team is worse than the orange team. The yellow team is the worst of all. "1 The green team" is done for you — write the teams in order, best first.</p>`,
+      questions: [
+        { type:"text", prompt:"Which team is in 2nd place?", accept:["the red team","red team","red"] },
+        { type:"text", prompt:"Which team is in 3rd place?", accept:["the blue team","blue team","blue"] },
+        { type:"text", prompt:"Which team is in 4th place?", accept:["the orange team","orange team","orange"] },
+        { type:"text", prompt:"Which team is in 5th place?", accept:["the purple team","purple team","purple"] },
+        { type:"text", prompt:"Which team is in 6th (last) place?", accept:["the yellow team","yellow team","yellow"] },
+        { type:"mcq", prompt:"The red team is ____ than the blue team.",
+          options:["better","worse"], answer:"better" },
+      ]
+    },
+    {
+      title: "Section B · Good, Bad, Better, Worse...",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"good → better → ____", accept:["best","the best"] },
+        { type:"text", prompt:"bad → worse → ____", accept:["worst","the worst"] },
+        { type:"mcq", prompt:"This cake is bad, but that cake is even ____.",
+          options:["worse","worst"], answer:"worse" },
+        { type:"mcq", prompt:"Of all the cakes, this one is the ____.",
+          options:["worse","worst"], answer:"worst" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — Soft c or Soft g?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-phonicscg.png" alt="Six pictures with words missing a letter: a city skyline, a birdcage, a bowl of rice, a giraffe, a stage, and two people dancing">
+        <p class="illustration-caption">"city" (soft c) is done for you. Choose the missing letter for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"ca__e (where you keep a pet bird)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"ri__e (white or brown grains you cook and eat)",
+          options:["c","g"], answer:"c" },
+        { type:"mcq", prompt:"__iraffe (a tall African animal with a very long neck)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"sta__e (where actors perform in a theatre)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"dan__e (to move your body to music)",
+          options:["c","g"], answer:"c" },
+      ]
+    },
+    {
+      title: "Section D · Soft c and Soft g Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"A tall African animal with a very long neck is a ____.", accept:["giraffe"] },
+        { type:"text", prompt:"You keep a pet bird in a ____.", accept:["cage"] },
+        { type:"text", prompt:"A place with lots of people, buildings and traffic is a ____.", accept:["city"] },
+        { type:"text", prompt:"White or brown grains that you cook and eat, often with curry, are called ____.", accept:["rice"] },
+        { type:"text", prompt:"When you move your body to music, you ____.", accept:["dance"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

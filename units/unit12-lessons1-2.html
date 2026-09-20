@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12 – Lessons 1 &amp; 2 | What's the Matter?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 12</span>
+    <h1>What's the Matter? 🤒</h1>
+    <p>Lessons 1 &amp; 2 — Illness Words &amp; Should/Shouldn't</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jimmy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 12 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 12 – Lessons 1 & 2 (Illness words; should/shouldn't)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · What's the Matter?",
+      points: 6,
+      intro:`<p class="illustration-caption">"He's got a stomach ache" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"I've got a ____. (my head hurts)", accept:["headache"] },
+        { type:"text", prompt:"She feels ____. (she might vomit)", accept:["sick"] },
+        { type:"text", prompt:"I feel ____. (everything seems to be spinning)", accept:["dizzy"] },
+        { type:"text", prompt:"He's got a ____. (sneezing, runny nose)", accept:["cold"] },
+        { type:"text", prompt:"She's got a ____. (her throat hurts when she swallows)", accept:["sore throat"] },
+        { type:"text", prompt:"I've got a ____. (I keep making this noise from my chest)", accept:["cough"] },
+      ]
+    },
+    {
+      title: "Section B · At the School Nurse",
+      points: 4,
+      intro:`<p class="illustration-caption">"Jimmy had a headache" is done for you. Four children went to see the school nurse.</p>`,
+      questions: [
+        { type:"text", prompt:"Aran had a ____ and an earache.", accept:["stomach ache"] },
+        { type:"text", prompt:"Aran had a stomach ache and an ____.", accept:["earache"] },
+        { type:"text", prompt:"The nurse gave the children some ____ and glasses of water.", accept:["medicine"] },
+        { type:"text", prompt:"If your head hurts, you've got a ____.", accept:["headache"] },
+      ]
+    },
+    {
+      title: "Section C · Should or Shouldn't?",
+      points: 6,
+      questions: [
+        { type:"mcq", prompt:"You ____ get dressed quickly.", options:["should","shouldn't"], answer:"should" },
+        { type:"mcq", prompt:"You ____ run in the kitchen.", options:["should","shouldn't"], answer:"shouldn't" },
+        { type:"mcq", prompt:"You ____ be late for school.", options:["should","shouldn't"], answer:"shouldn't" },
+        { type:"mcq", prompt:"You ____ listen to the teacher.", options:["should","shouldn't"], answer:"should" },
+        { type:"mcq", prompt:"You ____ talk when the teacher is talking.", options:["should","shouldn't"], answer:"shouldn't" },
+        { type:"mcq", prompt:"You ____ always try your hardest.", options:["should","shouldn't"], answer:"should" },
+      ]
+    },
+    {
+      title: "Section D · Health Advice",
+      points: 4,
+      questions: [
+        { type:"mcq", prompt:"If you have a cold, you should drink ____.", options:["orange juice","cola","nothing"], answer:"orange juice" },
+        { type:"mcq", prompt:"If you are ill, you should ____.", options:["stay in bed and rest","run around outside","stay up late"], answer:"stay in bed and rest" },
+        { type:"mcq", prompt:"If you have a headache, loud music ____.", options:["can make it worse","always helps","has no effect"], answer:"can make it worse" },
+        { type:"mcq", prompt:"If the doctor gives you medicine, you should ____.", options:["take it as directed","throw it away","give it to a friend"], answer:"take it as directed" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

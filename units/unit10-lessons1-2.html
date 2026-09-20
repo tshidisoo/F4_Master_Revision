@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 – Lessons 1 &amp; 2 | I've Printed My Homework</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 10</span>
+    <h1>I've Printed My Homework! 🖨️</h1>
+    <p>Lessons 1 &amp; 2 — Computer Words &amp; Present Perfect (Affirmative)</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jane Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 10 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 10 – Lessons 1 & 2 (Computer words; present perfect affirmative)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Computer Words",
+      points: 6,
+      intro:`<p class="illustration-caption">"To use the computer, you must do this first. Usually, you have a password. → log on" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"You use these to listen to sound on your computer.", accept:["headphones"] },
+        { type:"text", prompt:"You use this to click on things on the screen.", accept:["mouse"] },
+        { type:"text", prompt:"You can save your work onto this.", accept:["memory stick","usb","usb stick"] },
+        { type:"text", prompt:"The part of the computer where you see words and pictures.", accept:["screen"] },
+        { type:"text", prompt:"You do this so that you don't lose your work.", accept:["save"] },
+        { type:"text", prompt:"You do this to find the websites you need.", accept:["search"] },
+      ]
+    },
+    {
+      title: "Section B · Doing My Homework on the Computer",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"I find a picture of a little printer on the screen and ____ it with the mouse.", accept:["click"] },
+        { type:"text", prompt:"Then I want to print my work, so I switch on the ____.", accept:["printer"] },
+        { type:"text", prompt:"First, I ____, writing my name and password.", accept:["log on"] },
+        { type:"text", prompt:"I use my ____ to find the things I want to see on the screen.", accept:["mouse"] },
+      ]
+    },
+    {
+      title: "Section C · Circle the Correct Verb",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"We've ____ our books on the shelves.", options:["saved","put"], answer:"put" },
+        { type:"mcq", prompt:"He's ____ a model plane.", options:["made","saved"], answer:"made" },
+        { type:"mcq", prompt:"She's ____ her homework.", options:["put on","finished"], answer:"finished" },
+        { type:"mcq", prompt:"He's ____ his coat.", options:["logged on","put on"], answer:"put on" },
+        { type:"mcq", prompt:"We've ____ the living room.", options:["printed","tidied"], answer:"tidied" },
+      ]
+    },
+    {
+      title: "Section D · Write the Present Perfect",
+      points: 5,
+      intro:`<p class="illustration-caption">"Jane is doing her homework. Now, she's finished her homework." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Simon is making his bed. Now, ____ his bed.", accept:["he's made","he has made"] },
+        { type:"text", prompt:"Julia and Kate are putting away toys. Now, ____ them away.", accept:["they've put","they have put"] },
+        { type:"text", prompt:"Thomas is printing a document. Now, ____ the document.", accept:["he's printed","he has printed"] },
+        { type:"text", prompt:"We are tidying our room. Now, ____ our room.", accept:["we've tidied","we have tidied"] },
+        { type:"text", prompt:"I'm saving my document. Now, ____ my document.", accept:["i've saved","i have saved"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 12 · Skills Time!</span>
+    <h1>What's the Matter? 🤒</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 12: illness words, should/shouldn't, could/couldn't, phonics (le and al), reading about staying healthy, and so/because. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jimmy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 12 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 12 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · What's the Matter?",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"I've got a ____. (my head hurts)", accept:["headache"] },
+        { type:"text", prompt:"He's got a ____. (sneezing, runny nose)", accept:["cold"] },
+        { type:"text", prompt:"I've got a ____. (I keep making this noise from my chest)", accept:["cough"] },
+        { type:"text", prompt:"Aran had a stomach ache and an ____.", accept:["earache"] },
+        { type:"text", prompt:"The nurse gave the children some ____ and glasses of water.", accept:["medicine"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Should or Shouldn't?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"You ____ run in the kitchen.", options:["should","shouldn't"], answer:"shouldn't" },
+        { type:"mcq", prompt:"You ____ listen to the teacher.", options:["should","shouldn't"], answer:"should" },
+        { type:"mcq", prompt:"If you have a cold, you should drink ____.", options:["orange juice","cola","nothing"], answer:"orange juice" },
+        { type:"mcq", prompt:"If you are ill, you should ____.", options:["stay in bed and rest","run around outside","stay up late"], answer:"stay in bed and rest" },
+        { type:"mcq", prompt:"You ____ be late for school.", options:["should","shouldn't"], answer:"shouldn't" },
+      ]
+    },
+    {
+      title: "Lesson 3 · Could, Couldn't, Can, Can't",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"When I was a baby, I ____ walk or talk.", accept:["couldn't"] },
+        { type:"text", prompt:"But now I ____ ride a bike, swim and speak two languages.", accept:["can"] },
+        { type:"mcq", prompt:"200 years ago, people could ____.", options:["write with a feather","use a computer","watch TV"], answer:"write with a feather" },
+        { type:"mcq", prompt:"200 years ago, people couldn't ____.", options:["use a computer","write with a feather","go to school by horse and cart"], answer:"use a computer" },
+        { type:"mcq", prompt:"200 years ago, people couldn't ____.", options:["watch TV","write with a feather","go to school by horse and cart"], answer:"watch TV" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — le or al?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"table", options:["le","al"], answer:"le" },
+        { type:"mcq", prompt:"hospital", options:["le","al"], answer:"al" },
+        { type:"mcq", prompt:"sandal", options:["le","al"], answer:"al" },
+        { type:"mcq", prompt:"candle", options:["le","al"], answer:"le" },
+        { type:"mcq", prompt:"people", options:["le","al"], answer:"le" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — How to Stay Healthy",
+      points: 5,
+      intro:`<p class="illustration-caption">"People who exercise every day want to be fit" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"____ are a type of fish that have a lot of calcium.", accept:["sardines"] },
+        { type:"text", prompt:"To be ____, you have to eat a good diet and drink lots of water.", accept:["healthy"] },
+        { type:"text", prompt:"____ are made from potatoes. They have a lot of salt and fat.", accept:["crisps"] },
+        { type:"text", prompt:"Chocolate and sweets have got a lot of ____.", accept:["sugar"] },
+        { type:"text", prompt:"You need ____ to help your bones grow.", accept:["calcium"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · So, Because, and Healthy Habits",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"I was ill yesterday, ____ I didn't go to school.", accept:["so"] },
+        { type:"text", prompt:"I drink milk with my breakfast ____ it has got a lot of calcium.", accept:["because"] },
+        { type:"mcq", prompt:"walking — which branch does it belong to?", options:["do exercise","eat/drink","see people"], answer:"do exercise" },
+        { type:"mcq", prompt:"fruit — which branch does it belong to?", options:["eat/drink","do exercise","learn things"], answer:"eat/drink" },
+        { type:"mcq", prompt:"read books — which branch does it belong to?", options:["learn things","do exercise","eat/drink"], answer:"learn things" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

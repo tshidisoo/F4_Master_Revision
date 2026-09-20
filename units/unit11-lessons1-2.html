@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 11 – Lessons 1 &amp; 2 | Have You Ever Been...?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 11</span>
+    <h1>Have You Ever Been...? 🌋</h1>
+    <p>Lessons 1 &amp; 2 — Places Words &amp; Present Perfect with Ever</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Lulu Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 11 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 11 – Lessons 1 & 2 (Places words; present perfect with ever)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Places Words",
+      points: 6,
+      intro:`<p class="illustration-caption">"A desert/village is smaller than a town. → village" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"An oasis/ocean is a very big sea.", accept:["ocean"] },
+        { type:"text", prompt:"A cave/town is a hole in the rocks that you can get inside.", accept:["cave"] },
+        { type:"text", prompt:"A rainforest/village is a hot, wet place with lots of trees.", accept:["rainforest"] },
+        { type:"text", prompt:"It can be very hot near a volcano/cave because hot gas comes out of the top.", accept:["volcano"] },
+        { type:"text", prompt:"An oasis/island is land with water around it.", accept:["island"] },
+        { type:"text", prompt:"In a rainforest/desert, there is lots of sand and people travel by camel.", accept:["desert"] },
+      ]
+    },
+    {
+      title: "Section B · Where People Live",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"Ahmed lives in Cairo, the ____ of Egypt.", accept:["capital"] },
+        { type:"text", prompt:"Sylvia lives in a ____ called Omata.", accept:["town"] },
+        { type:"text", prompt:"Ahmed visits a place in the desert with water and trees, called Baharia ____.", accept:["oasis"] },
+        { type:"text", prompt:"A place smaller than a town is called a ____.", accept:["village"] },
+      ]
+    },
+    {
+      title: "Section C · Has Lulu Ever Been There?",
+      points: 4,
+      intro:`<p class="illustration-caption">Lulu's passport has stamps from Spain, Egypt and England. "Has Lulu ever been to England? Yes, she has." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has she ever been to Russia?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+        { type:"mcq", prompt:"Has she ever been to Spain?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has she ever been to Egypt?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has she ever been to Thailand?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+      ]
+    },
+    {
+      title: "Section D · Make the Question",
+      points: 6,
+      intro:`<p class="illustration-caption">Put the words in order to make a question. "the moon / people / ever / ? / Have / been to → Have people ever been to the moon?" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"seen / you / Have / a rainforest / ever / ?", accept:["have you ever seen a rainforest"] },
+        { type:"text", prompt:"been to / ? / astronauts / other / ever / planets / Have", accept:["have other astronauts ever been to planets"] },
+        { type:"text", prompt:"a cave / ? / you / Have / ever / been in", accept:["have you ever been in a cave"] },
+        { type:"text", prompt:"ever / Has / Mat Jones / space / ? / been to", accept:["has mat jones ever been to space"] },
+        { type:"text", prompt:"a volcano / ever / ? / Has / Mat Jones / climbed", accept:["has mat jones ever climbed a volcano"] },
+        { type:"text", prompt:"the moon / people / ever / ? / Have / been to", accept:["have people ever been to the moon"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

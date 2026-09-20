@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6 – Lessons 1 &amp; 2 | The Best Bed!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 6</span>
+    <h1>The Best Bed! 🛏️</h1>
+    <p>Lessons 1 &amp; 2 — Describing Words &amp; Comparatives/Superlatives (Long Adjectives)</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Susanna Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 6 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 6 – Lessons 1 & 2 (Describing words; comparatives/superlatives — long adjectives)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Describing Words",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit6-wordsnake.png" alt="A word-snake curling around a picture of a bed, spelling out: modern, expensive, break, metal, hard, comfortable, repair, cheap, wooden, soft">
+        <p class="illustration-caption">"If you jump on a chair, it can break" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This is hard and shiny. Coins are made of this.", accept:["metal"] },
+        { type:"text", prompt:"Things made from wood are this.", accept:["wooden"] },
+        { type:"text", prompt:"It doesn't cost a lot of money.", accept:["cheap"] },
+        { type:"text", prompt:"You need a lot of money to buy this.", accept:["expensive"] },
+        { type:"text", prompt:"When a bed or chair makes you feel relaxed, it is this.", accept:["comfortable"] },
+        { type:"text", prompt:"Something that looks new.", accept:["modern"] },
+      ]
+    },
+    {
+      title: "Section B · Susanna's New Chair",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit6-furnitureshop.png" alt="Susanna and her parents in a furniture shop, looking at chairs">
+        <p class="illustration-caption">"Yesterday, her chair broke" is done for you. Complete the story using words from Section A.</p>`,
+      questions: [
+        { type:"text", prompt:"Her parents cannot ____ it, so they are buying a new chair today. (fix something broken)", accept:["repair"] },
+        { type:"text", prompt:"Susanna likes wood, so she wants a ____ chair.", accept:["wooden"] },
+        { type:"text", prompt:"Her dad prefers metal because it is stronger, but Susanna thinks metal is too ____.", accept:["hard"] },
+        { type:"text", prompt:"Mum shows Susanna a cushion to put on the chair, to make the chair ____.", accept:["soft"] },
+      ]
+    },
+    {
+      title: "Section C · Comparatives and Superlatives — Long Adjectives",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit6-toys.png" alt="Three toys with price tags: a frisbee for £2, an MP3 player for £26, and a computer game console for £120">
+        <p class="illustration-caption">Look at the prices and sizes, then circle the correct word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"The computer game is the ____ expensive toy.",
+          options:["most","least"], answer:"most" },
+        { type:"mcq", prompt:"The MP3 player is ____ expensive than the computer game.",
+          options:["less","more"], answer:"less" },
+        { type:"mcq", prompt:"The MP3 player is ____ than the computer game.",
+          options:["bigger","smaller"], answer:"smaller" },
+        { type:"mcq", prompt:"But the MP3 player is ____ expensive than the frisbee.",
+          options:["less","more"], answer:"more" },
+        { type:"mcq", prompt:"The frisbee is the ____ expensive toy.",
+          options:["least","most"], answer:"least" },
+        { type:"mcq", prompt:"The frisbee is also the ____.",
+          options:["biggest","smallest"], answer:"smallest" },
+      ]
+    },
+    {
+      title: "Section D · Comparing People",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit6-family.png" alt="Billy's family photo: two sisters and two brothers">
+        <p class="illustration-caption">"Sandy is older (old) than Maria" is done for you. Billy has two sisters (Sandy, Maria) and two brothers (Thomas, Henry).</p>`,
+      questions: [
+        { type:"text", prompt:"But Maria is ____ (generous) and always shares her toys.", accept:["more generous"] },
+        { type:"text", prompt:"Henry is ____ (young) than Thomas.", accept:["younger"] },
+        { type:"text", prompt:"But Henry is ____ (friendly) than his brother.", accept:["friendlier","more friendly"] },
+        { type:"text", prompt:"Thomas is ____ (quiet) than his brother.", accept:["quieter","more quiet"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

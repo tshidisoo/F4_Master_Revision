@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 7 – Lessons 3 &amp; 4 | Will It Really Happen?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 7</span>
+    <h1>Will It Really Happen? 🚀</h1>
+    <p>Lessons 3 &amp; 4 — Time Markers &amp; Phonics: au, aw and or</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Dad Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 7 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 7 – Lessons 3 & 4 (Time markers; phonics: au, aw and or)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Our Holiday to the Beach",
+      points: 6,
+      intro:`<p class="illustration-caption">"Tonight, Dad will show us photos of the hotel" is done for you. Read the story and complete it.</p>`,
+      questions: [
+        { type:"text", prompt:"Tonight, Dad will show us photos of the ____.", accept:["hotel"] },
+        { type:"text", prompt:"We'll go to the shop to buy new ____ tomorrow.", accept:["swimsuits","swimsuit"] },
+        { type:"text", prompt:"On Tuesday, I'll choose what to ____.", accept:["pack"] },
+        { type:"text", prompt:"I'll start packing in three ____' time.", accept:["days"] },
+        { type:"text", prompt:"Next week, we'll be at the ____.", accept:["beach"] },
+        { type:"text", prompt:"We'll come home from the holiday in two ____' time.", accept:["weeks","week"] },
+      ]
+    },
+    {
+      title: "Section B · Sooner or Later?",
+      points: 4,
+      questions: [
+        { type:"mcq", prompt:"Which happens sooner: 'tonight' or 'next week'?",
+          options:["tonight","next week"], answer:"tonight" },
+        { type:"mcq", prompt:"Which happens sooner: 'tomorrow' or 'in three days' time'?",
+          options:["tomorrow","in three days' time"], answer:"tomorrow" },
+        { type:"mcq", prompt:"Which happens later: 'next week' or 'in two weeks' time'?",
+          options:["next week","in two weeks' time"], answer:"in two weeks' time" },
+        { type:"mcq", prompt:"Which happens later: 'on Tuesday' or 'tonight'?",
+          options:["on Tuesday","tonight"], answer:"on Tuesday" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — au, aw or or?",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-phonicsauawor.png" alt="Six pictures: a jigsaw puzzle, a horse, an animal's paw, a bowl of sauce, autumn trees, and a glass with a straw">
+        <p class="illustration-caption">"jigsaw" (aw) is done for you. Choose the correct spelling for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"h__se (an animal you can ride)",
+          options:["au","aw","or"], answer:"or" },
+        { type:"mcq", prompt:"p__ (an animal's foot)",
+          options:["au","aw","or"], answer:"aw" },
+        { type:"mcq", prompt:"s__ce (a tasty liquid you pour over food)",
+          options:["au","aw","or"], answer:"au" },
+        { type:"mcq", prompt:"__tumn (the season after summer)",
+          options:["au","aw","or"], answer:"au" },
+        { type:"mcq", prompt:"str__ (a thin tube for drinking)",
+          options:["au","aw","or"], answer:"aw" },
+      ]
+    },
+    {
+      title: "Section D · au, aw and or Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"A tall animal that people ride, with hooves.", accept:["horse"] },
+        { type:"text", prompt:"An animal's foot, especially a cat's or dog's foot.", accept:["paw"] },
+        { type:"text", prompt:"A tasty liquid you pour over pasta or meat.", accept:["sauce"] },
+        { type:"text", prompt:"The season after summer, when leaves fall from the trees.", accept:["autumn"] },
+        { type:"text", prompt:"A thin tube you use to drink a drink.", accept:["straw"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 11 – Lessons 3 &amp; 4 | Have You Ever Been...?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 11</span>
+    <h1>Have You Ever Been...? 🌋</h1>
+    <p>Lessons 3 &amp; 4 — Present Perfect: Never &amp; Phonics: ea and e</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Claire Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 11 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 11 – Lessons 3 & 4 (Present perfect: never; phonics: ea and e)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Claire, Mark and Ruby",
+      points: 6,
+      intro:`<p class="illustration-caption">Claire: Been to a desert ✓, Seen a volcano ✗, Been skiing ✗. Mark: Been to a desert ✗, Seen a volcano ✗, Been skiing ✓. Ruby: Been to a desert ✗, Seen a volcano ✓, Been skiing ✗. "Claire has been to a desert, but she has never seen a volcano or been skiing" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has Claire ever seen a volcano?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+        { type:"mcq", prompt:"Has Claire ever been to a desert?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has Mark ever been skiing?", options:["Yes, he has.","No, he hasn't."], answer:"Yes, he has." },
+        { type:"mcq", prompt:"Has Mark ever been to a desert?", options:["Yes, he has.","No, he hasn't."], answer:"No, he hasn't." },
+        { type:"mcq", prompt:"Has Ruby ever seen a volcano?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has Ruby ever been skiing?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+      ]
+    },
+    {
+      title: "Section B · Countries and Places",
+      points: 4,
+      questions: [
+        { type:"mcq", prompt:"Which of these is a country, not a landform?", options:["Egypt","a desert","an oasis","a forest"], answer:"Egypt" },
+        { type:"mcq", prompt:"Which of these is a landform, not a country?", options:["Thailand","Spain","a desert","Vietnam"], answer:"a desert" },
+        { type:"mcq", prompt:"Which of these is a country?", options:["an oasis","Brazil","a forest","a desert"], answer:"Brazil" },
+        { type:"mcq", prompt:"Which of these is a landform, not a country?", options:["Mexico","Russia","an oasis","Australia"], answer:"an oasis" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — ea or e?",
+      points: 5,
+      intro:`<p class="illustration-caption">"bread" is spelled with ea — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"tent", options:["ea","e"], answer:"e" },
+        { type:"mcq", prompt:"present", options:["ea","e"], answer:"e" },
+        { type:"mcq", prompt:"heavy", options:["ea","e"], answer:"ea" },
+        { type:"mcq", prompt:"feather", options:["ea","e"], answer:"ea" },
+        { type:"mcq", prompt:"spend", options:["ea","e"], answer:"e" },
+      ]
+    },
+    {
+      title: "Section D · ea and e Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"A type of food made from flour, water and yeast.", accept:["bread"] },
+        { type:"text", prompt:"You sleep in this when camping outdoors.", accept:["tent"] },
+        { type:"text", prompt:"A gift you give someone on their birthday.", accept:["present"] },
+        { type:"text", prompt:"A light, fluffy part of a bird's covering.", accept:["feather"] },
+        { type:"text", prompt:"The part of your body above your neck, where your brain is.", accept:["head"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

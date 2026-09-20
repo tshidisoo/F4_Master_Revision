@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 10 · Skills Time!</span>
+    <h1>I've Printed My Homework! 🖨️</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 10: computer words, the present perfect, phonics (ur and ir), reading about emails, and parts of speech. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jane Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 10 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 10 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Computer Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"The part of the computer where you see words and pictures.", accept:["screen"] },
+        { type:"text", prompt:"You do this so that you don't lose your work.", accept:["save"] },
+        { type:"text", prompt:"You do this to find the websites you need.", accept:["search"] },
+        { type:"text", prompt:"With the computer mouse, you ____ things to open and close them.", accept:["click"] },
+        { type:"text", prompt:"You use this to print out your documents.", accept:["printer"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Present Perfect (Affirmative)",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"He's ____ a model plane.", options:["made","saved"], answer:"made" },
+        { type:"mcq", prompt:"We've ____ the living room.", options:["printed","tidied"], answer:"tidied" },
+        { type:"text", prompt:"Simon is making his bed. Now, ____ his bed.", accept:["he's made","he has made"] },
+        { type:"text", prompt:"Thomas is printing a document. Now, ____ the document.", accept:["he's printed","he has printed"] },
+        { type:"text", prompt:"I'm saving my document. Now, ____ my document.", accept:["i've saved","i have saved"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Present Perfect (Questions and Negatives)",
+      points: 5,
+      intro:`<p class="illustration-caption">Charlie: Do homework ✓, Make bed ✗, Clean table ✓. Sasha: Do homework ✓, Make bed ✓, Help with dinner ✗.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has Charlie made his bed?",
+          options:["Yes, he has.","No, he hasn't.","Yes, they have."], answer:"No, he hasn't." },
+        { type:"mcq", prompt:"Have Charlie and Sasha done their homework?",
+          options:["Yes, they have.","No, they haven't.","Yes, she has."], answer:"Yes, they have." },
+        { type:"text", prompt:"(He / see / new game)", accept:["has he seen the new game","has he seen the new game?"] },
+        { type:"text", prompt:"(She / turn off / printer)", accept:["has she turned off the printer","has she turned off the printer?"] },
+        { type:"text", prompt:"(You / save / document)", accept:["have you saved the document","have you saved document"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — ur or ir?",
+      points: 5,
+      intro:`<p class="illustration-caption">"Thursday" is spelled with ur — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"shirt", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"nurse", options:["ur","ir"], answer:"ur" },
+        { type:"mcq", prompt:"circle", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"girl", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"curtain", options:["ur","ir"], answer:"ur" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Sending Emails",
+      points: 5,
+      intro:`<p class="illustration-caption">"Before you send your email, it is good to check the spelling by using a spell checker." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When you send an email, you click on To and type the person's email ____.", accept:["address"] },
+        { type:"text", prompt:"This is what you write in the email.", accept:["message"] },
+        { type:"text", prompt:"When you go on the Internet, you can look at lots of different ____.", accept:["websites","website"] },
+        { type:"text", prompt:"You can ____ a photo to your email.", accept:["attach"] },
+        { type:"text", prompt:"We type our documents using a ____.", accept:["keyboard"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Parts of Speech, Adjectives and Adverbs",
+      points: 5,
+      intro:`<p class="illustration-caption">"I often use my dad's new computer" — S=I, V=use, O=my dad's new computer — is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"In \"Sometimes we attach photos, too,\" what is the verb?", accept:["attach"] },
+        { type:"text", prompt:"In \"I've found a great website,\" what is the object?", accept:["a great website","great website","website"] },
+        { type:"text", prompt:"I can type very ____ now. (fast)", accept:["fast"] },
+        { type:"text", prompt:"It was ____ to learn at first. (difficult)", accept:["difficult"] },
+        { type:"text", prompt:"There is a ____ game we play together. (funny)", accept:["funny"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

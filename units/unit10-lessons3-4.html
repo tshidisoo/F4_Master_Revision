@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 – Lessons 3 &amp; 4 | I've Printed My Homework</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 10</span>
+    <h1>I've Printed My Homework! 🖨️</h1>
+    <p>Lessons 3 &amp; 4 — Present Perfect (Questions/Negatives) &amp; Phonics: ur and ir</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Charlie Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 10 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 10 – Lessons 3 & 4 (Present perfect questions/negatives; phonics: ur and ir)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Has/Have Charlie and Sasha...?",
+      points: 6,
+      intro:`<p class="illustration-caption">Charlie: Do homework ✓, Make bed ✗, Tidy room ✓, Help with dinner ✗, Clean table ✓. Sasha: Do homework ✓, Make bed ✓, Tidy room ✗, Help with dinner ✗, Clean table ✗.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has Charlie made his bed?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"No, he hasn't." },
+        { type:"mcq", prompt:"Has Charlie cleaned the table?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"Yes, he has." },
+        { type:"mcq", prompt:"Has Sasha made her bed?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has Sasha tidied her room?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"No, she hasn't." },
+        { type:"mcq", prompt:"Have Charlie and Sasha done their homework?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"Yes, they have." },
+        { type:"mcq", prompt:"Have Charlie and Sasha helped with dinner?",
+          options:["Yes, she has.","No, he hasn't.","Yes, they have.","Yes, he has.","No, they haven't.","No, she hasn't."], answer:"No, they haven't." },
+      ]
+    },
+    {
+      title: "Section B · Write Questions in the Present Perfect",
+      points: 3,
+      intro:`<p class="illustration-caption">"(He / see / new game) → Has he seen the new game?" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"(She / turn off / printer)", accept:["has she turned off the printer","has she turned off the printer?"] },
+        { type:"text", prompt:"(They / finish / homework)", accept:["have they finished their homework","have they finished homework"] },
+        { type:"text", prompt:"(You / save / document)", accept:["have you saved the document","have you saved document"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — ur or ir?",
+      points: 6,
+      intro:`<p class="illustration-caption">"Thursday" is spelled with ur — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"shirt", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"nurse", options:["ur","ir"], answer:"ur" },
+        { type:"mcq", prompt:"circle", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"girl", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"bird", options:["ur","ir"], answer:"ir" },
+        { type:"mcq", prompt:"curtain", options:["ur","ir"], answer:"ur" },
+      ]
+    },
+    {
+      title: "Section D · ur and ir Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"The day you were born, celebrated every year, is your ____.", accept:["birthday"] },
+        { type:"text", prompt:"You hang these on a window to block light.", accept:["curtains","curtain"] },
+        { type:"text", prompt:"A piece of clothing you wear on your upper body, often with buttons.", accept:["shirt"] },
+        { type:"text", prompt:"A person who takes care of sick people in a hospital.", accept:["nurse"] },
+        { type:"text", prompt:"If you fall down and injure your knee, you ____ it.", accept:["hurt"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

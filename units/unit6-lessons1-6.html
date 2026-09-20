@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 6 · Skills Time!</span>
+    <h1>The Best Bed! 🛏️</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 6: describing words, comparatives &amp; superlatives (long and irregular adjectives), phonics (soft c and soft g), reading a fable, and irregular plurals. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Susanna Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 6 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 6 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Describing Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-wordsnake.png" alt="A word-snake curling around a picture of a bed, spelling out: modern, expensive, break, metal, hard, comfortable, repair, cheap, wooden, soft">
+        <p class="illustration-caption">"If you jump on a chair, it can break" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This is hard and shiny. Coins are made of this.", accept:["metal"] },
+        { type:"text", prompt:"Things made from wood are this.", accept:["wooden"] },
+        { type:"text", prompt:"It doesn't cost a lot of money.", accept:["cheap"] },
+        { type:"text", prompt:"When something is broken, you need to do this.", accept:["repair"] },
+        { type:"text", prompt:"It changes its shape if you sit on it.", accept:["soft"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Comparatives and Superlatives — Long Adjectives",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-toys.png" alt="Three toys with price tags: a frisbee for £2, an MP3 player for £26, and a computer game console for £120">
+        <p class="illustration-caption">Look at the prices and sizes, then choose the correct word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"The computer game is the ____ expensive toy.",
+          options:["most","least"], answer:"most" },
+        { type:"mcq", prompt:"The MP3 player is ____ expensive than the computer game.",
+          options:["less","more"], answer:"less" },
+        { type:"mcq", prompt:"The frisbee is the ____ expensive toy.",
+          options:["least","most"], answer:"least" },
+        { type:"mcq", prompt:"The frisbee is also the ____.",
+          options:["biggest","smallest"], answer:"smallest" },
+        { type:"text", prompt:"Sandy is ____ (old) than Maria.", accept:["older"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Irregular Comparatives and Superlatives",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-football.png" alt="Five footballs stacked next to a list of six football teams">
+        <p class="illustration-caption">Greenfield school football league: green (best), red, blue, orange, purple, yellow (worst). "1 The green team" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Which team is in 2nd place?", accept:["the red team","red team","red"] },
+        { type:"text", prompt:"Which team is in last (6th) place?", accept:["the yellow team","yellow team","yellow"] },
+        { type:"mcq", prompt:"The red team is ____ than the blue team.",
+          options:["better","worse"], answer:"better" },
+        { type:"text", prompt:"good → better → ____", accept:["best","the best"] },
+        { type:"text", prompt:"bad → worse → ____", accept:["worst","the worst"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — Soft c and Soft g",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-phonicscg.png" alt="Six pictures with words missing a letter: a city skyline, a birdcage, a bowl of rice, a giraffe, a stage, and two people dancing">
+        <p class="illustration-caption">"city" (soft c) is done for you. Choose the missing letter for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"ca__e (where you keep a pet bird)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"ri__e (white or brown grains you cook and eat)",
+          options:["c","g"], answer:"c" },
+        { type:"mcq", prompt:"__iraffe (a tall African animal with a very long neck)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"sta__e (where actors perform in a theatre)",
+          options:["c","g"], answer:"g" },
+        { type:"mcq", prompt:"dan__e (to move your body to music)",
+          options:["c","g"], answer:"c" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — A Fable (The Ant and the Grasshopper)",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-antgrasshopper.png" alt="Eight pictures of an ant and a grasshopper: the ant walking, digging, carrying food, and working, while the grasshopper relaxes, plays music, and shares">
+        <p class="illustration-caption">"When something is very, very big, it is enormous" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When someone doesn't want to work or study, the person is ____.", accept:["lazy"] },
+        { type:"text", prompt:"If something is under the ground, you have to ____ to get it out.", accept:["dig"] },
+        { type:"text", prompt:"A child who gives their toys to others is ____.", accept:["generous"] },
+        { type:"mcq", prompt:"In the fable, who worked hard collecting food all summer?",
+          options:["The ant","The grasshopper"], answer:"The ant" },
+        { type:"mcq", prompt:"What is the moral of the story?",
+          options:["It's wise to prepare for the future","It's best to play all day","Music is more important than food"],
+          answer:"It's wise to prepare for the future" },
+      ]
+    },
+    {
+      title: "Lesson 6 · Identifying Irregular Plurals",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit6-boysheep.png" alt="A boy sitting on rocks in the mountains, looking after a flock of sheep">
+        <p class="illustration-caption">"My shoes are too small for my feet" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"I brush my ____ twice a day. (tooth → plural)", accept:["teeth"] },
+        { type:"text", prompt:"I can see three ____ in the river. (fish → plural)", accept:["fish"] },
+        { type:"text", prompt:"There are six ____ in my family. (person → plural)", accept:["people"] },
+        { type:"text", prompt:"Wool comes from ____. (sheep → plural)", accept:["sheep"] },
+        { type:"text", prompt:"There are two ____ in the shop. (woman → plural)", accept:["women"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

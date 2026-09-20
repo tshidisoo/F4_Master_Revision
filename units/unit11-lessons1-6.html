@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 11 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 11 · Skills Time!</span>
+    <h1>Have You Ever Been...? 🌋</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 11: places words, the present perfect with ever/never, phonics (ea and e), reading about Everest, and topic sentences. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Lulu Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 11 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 11 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Places Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"An oasis/ocean is a very big sea.", accept:["ocean"] },
+        { type:"text", prompt:"A cave/town is a hole in the rocks that you can get inside.", accept:["cave"] },
+        { type:"text", prompt:"It can be very hot near a volcano because hot gas comes out of the top.", accept:["volcano"] },
+        { type:"text", prompt:"In a desert, there is lots of sand and people travel by camel.", accept:["desert"] },
+        { type:"text", prompt:"London, Cairo, Madrid and Moscow are all ____ cities.", accept:["capital"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Present Perfect with Ever",
+      points: 5,
+      intro:`<p class="illustration-caption">Lulu's passport has stamps from Spain, Egypt and England. "Has Lulu ever been to England? Yes, she has." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has she ever been to Spain?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Has she ever been to Thailand?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+        { type:"text", prompt:"the moon / people / ever / ? / Have / been to", accept:["have people ever been to the moon"] },
+        { type:"text", prompt:"a cave / ? / you / Have / ever / been in", accept:["have you ever been in a cave"] },
+        { type:"text", prompt:"a volcano / ever / ? / Has / Mat Jones / climbed", accept:["has mat jones ever climbed a volcano"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Present Perfect: Never",
+      points: 5,
+      intro:`<p class="illustration-caption">Claire: Been to a desert ✓, Seen a volcano ✗, Been skiing ✗. Mark: Been skiing ✓ only. Ruby: Seen a volcano ✓ only.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Has Claire ever seen a volcano?", options:["Yes, she has.","No, she hasn't."], answer:"No, she hasn't." },
+        { type:"mcq", prompt:"Has Mark ever been skiing?", options:["Yes, he has.","No, he hasn't."], answer:"Yes, he has." },
+        { type:"mcq", prompt:"Has Ruby ever seen a volcano?", options:["Yes, she has.","No, she hasn't."], answer:"Yes, she has." },
+        { type:"mcq", prompt:"Which of these is a country, not a landform?", options:["Egypt","a desert","an oasis"], answer:"Egypt" },
+        { type:"mcq", prompt:"Which of these is a landform, not a country?", options:["a desert","Spain","Brazil"], answer:"a desert" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — ea or e?",
+      points: 5,
+      intro:`<p class="illustration-caption">"bread" is spelled with ea — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"tent", options:["ea","e"], answer:"e" },
+        { type:"mcq", prompt:"present", options:["ea","e"], answer:"e" },
+        { type:"mcq", prompt:"heavy", options:["ea","e"], answer:"ea" },
+        { type:"mcq", prompt:"feather", options:["ea","e"], answer:"ea" },
+        { type:"mcq", prompt:"spend", options:["ea","e"], answer:"e" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Everest Expedition",
+      points: 5,
+      intro:`<p class="illustration-caption">"People need this gas to live. → oxygen" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Ice creams ____ on a hot day.", accept:["melt"] },
+        { type:"text", prompt:"A long and difficult journey.", accept:["expedition"] },
+        { type:"text", prompt:"The top of a mountain.", accept:["summit"] },
+        { type:"text", prompt:"When a river turns to ice, it is ____.", accept:["frozen"] },
+        { type:"text", prompt:"You need diving ____ to dive under the sea.", accept:["equipment"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Topic Sentences",
+      points: 5,
+      intro:`<p class="illustration-caption">"I've got a pet and her name is Snowy" introduces the first paragraph — done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which sentence introduces a paragraph about Snowy coming to live with the family as a kitten?",
+          options:["Snowy loves to eat.","Snowy came to live with us when she was a kitten.","Snowy likes to play."],
+          answer:"Snowy came to live with us when she was a kitten." },
+        { type:"mcq", prompt:"Which sentence introduces a paragraph about Snowy playing?",
+          options:["Snowy likes to play.","Snowy loves to eat.","I've got a pet and her name is Snowy."],
+          answer:"Snowy likes to play." },
+        { type:"mcq", prompt:"Which sentence introduces a paragraph about Snowy's food?",
+          options:["Snowy loves to eat.","Snowy likes to play.","Snowy came to live with us when she was a kitten."],
+          answer:"Snowy loves to eat." },
+        { type:"mcq", prompt:"Which phrase means you looked at your gear to make sure it was OK?",
+          options:["checked equipment","took photos","fell over"], answer:"checked equipment" },
+        { type:"mcq", prompt:"Which phrase means you took a picture?",
+          options:["took photos","buried chocolates in the snow","stayed in a tent"], answer:"took photos" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

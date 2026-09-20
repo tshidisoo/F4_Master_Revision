@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 7 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 7 · Skills Time!</span>
+    <h1>Will It Really Happen? 🚀</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 7: space words, the future with will/won't, time markers, phonics (au, aw and or), reading about the future, and compound nouns. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Lizzy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 7 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 7 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Space Words",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-space.png" alt="A space scene showing the year 2045, the sun, an astronaut, a satellite, a rocket, Earth, a spaceship, the moon and stars">
+        <p class="illustration-caption">"1 Go from one place to another → travel" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"It's long and thin and carries astronauts.", accept:["rocket"] },
+        { type:"text", prompt:"These travel above the Earth. They help us to use mobile phones and TV.", accept:["satellites","satellite"] },
+        { type:"text", prompt:"It gives us light and keeps us warm.", accept:["sun"] },
+        { type:"text", prompt:"A big ship that travels around in space.", accept:["spaceship","spaceships"] },
+        { type:"text", prompt:"They shine in the night sky.", accept:["stars","star"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · The Future with Will/Won't",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-packing.png" alt="A packing checklist for Lizzy's trip to the waterfall: Remember to take a lunch box, a coat, rain boots and an umbrella. Don't take a school bag, school shoes or her school uniform">
+        <p class="illustration-caption">"Will Lizzy take her lunch box to school tomorrow? Yes, she will." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Will she take her school bag?",
+          options:["Yes, she will.","No, she won't."], answer:"No, she won't." },
+        { type:"mcq", prompt:"Will she take an umbrella?",
+          options:["Yes, she will.","No, she won't."], answer:"Yes, she will." },
+        { type:"text", prompt:"Next Thursday, Philip ____ go to school as usual.", accept:["won't"] },
+        { type:"text", prompt:"He ____ stand on a stage with other children.", accept:["will"] },
+        { type:"text", prompt:"He ____ wear his normal school uniform.", accept:["won't"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Time Markers",
+      points: 5,
+      intro:`<p class="illustration-caption">"Tonight, Dad will show us photos of the hotel" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"We'll go to the shop to buy new ____ tomorrow.", accept:["swimsuits","swimsuit"] },
+        { type:"text", prompt:"On Tuesday, I'll choose what to ____.", accept:["pack"] },
+        { type:"text", prompt:"Next week, we'll be at the ____.", accept:["beach"] },
+        { type:"mcq", prompt:"Which happens sooner: 'tomorrow' or 'next week'?",
+          options:["tomorrow","next week"], answer:"tomorrow" },
+        { type:"mcq", prompt:"Which happens later: 'next week' or 'in two weeks' time'?",
+          options:["next week","in two weeks' time"], answer:"in two weeks' time" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — au, aw or or",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-phonicsauawor.png" alt="Six pictures: a jigsaw puzzle, a horse, an animal's paw, a bowl of sauce, autumn trees, and a glass with a straw">
+        <p class="illustration-caption">"jigsaw" (aw) is done for you. Choose the correct spelling for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"h__se (an animal you can ride)",
+          options:["au","aw","or"], answer:"or" },
+        { type:"mcq", prompt:"p__ (an animal's foot)",
+          options:["au","aw","or"], answer:"aw" },
+        { type:"mcq", prompt:"s__ce (a tasty liquid you pour over food)",
+          options:["au","aw","or"], answer:"au" },
+        { type:"mcq", prompt:"__tumn (the season after summer)",
+          options:["au","aw","or"], answer:"au" },
+        { type:"mcq", prompt:"str__ (a thin tube for drinking)",
+          options:["au","aw","or"], answer:"aw" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Words in Context",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-underwaterigloo.png" alt="A child snorkelling next to an underwater dome-shaped house, with fish and coral around">
+        <p class="illustration-caption">"We power cars and other machines with fuel" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Coral is an ____ plant.", accept:["underwater"] },
+        { type:"text", prompt:"We can get ____ from the sun.", accept:["energy"] },
+        { type:"text", prompt:"You can ____ some computers with your voice.", accept:["control"] },
+        { type:"text", prompt:"____ are like boats that go under the sea.", accept:["submarines","submarine"] },
+        { type:"text", prompt:"Doctors sometimes give us ____ to get well.", accept:["medicine"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Compound Nouns",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit7-underwatercity.png" alt="A diver exploring an underwater city with buildings and a submarine-like vehicle">
+        <p class="illustration-caption">"motor + boat = motorboat" is done for you. Join the words to make compound nouns.</p>`,
+      questions: [
+        { type:"text", prompt:"bed + room = ____", accept:["bedroom"] },
+        { type:"text", prompt:"super + market = ____", accept:["supermarket"] },
+        { type:"text", prompt:"play + ground = ____", accept:["playground"] },
+        { type:"text", prompt:"sea + food = ____", accept:["seafood"] },
+        { type:"text", prompt:"house + work = ____", accept:["housework"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

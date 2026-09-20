@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 7 – Lessons 1 &amp; 2 | Will It Really Happen?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 7</span>
+    <h1>Will It Really Happen? 🚀</h1>
+    <p>Lessons 1 &amp; 2 — Space Words &amp; The Future with Will/Won't</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Lizzy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 7 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 7 – Lessons 1 & 2 (Space words; the future with will/won't)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Space Words",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit7-space.png" alt="A space scene showing the year 2045, the sun, an astronaut, a satellite, a rocket, Earth, a spaceship, the moon and stars">
+        <p class="illustration-caption">"1 Go from one place to another → travel" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"These people travel in space.", accept:["astronauts","astronaut"] },
+        { type:"text", prompt:"It's long and thin and carries astronauts.", accept:["rocket"] },
+        { type:"text", prompt:"The Earth is one.", accept:["planet"] },
+        { type:"text", prompt:"These travel above the Earth. They help us to use mobile phones and TV.", accept:["satellites","satellite"] },
+        { type:"text", prompt:"We can see this at night time from Earth.", accept:["moon"] },
+        { type:"text", prompt:"They shine in the night sky.", accept:["stars","star"] },
+      ]
+    },
+    {
+      title: "Section B · In the Future...",
+      points: 4,
+      intro:`<p class="illustration-caption">"In the future, you won't have to be an astronaut..." is done for you. Complete the rest of the sentence with words from Section A's picture.</p>`,
+      questions: [
+        { type:"text", prompt:"In the future, you won't have to be an ____ to travel in space.", accept:["astronaut"] },
+        { type:"text", prompt:"In the future, you won't have to be an astronaut to ____ in space.", accept:["travel"] },
+        { type:"text", prompt:"Some people will travel in big ____.", accept:["spaceships","spaceship"] },
+        { type:"text", prompt:"The people won't go near the ____. It's too hot.", accept:["sun"] },
+      ]
+    },
+    {
+      title: "Section C · Will Lizzy Take It on Her Trip?",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit7-packing.png" alt="A packing checklist for Lizzy's trip to the waterfall: Remember to take a lunch box, a coat, rain boots and an umbrella. Don't take a school bag, school shoes or her school uniform">
+        <p class="illustration-caption">"Will Lizzy take her lunch box to school tomorrow? Yes, she will." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Will she take her school bag?",
+          options:["Yes, she will.","No, she won't."], answer:"No, she won't." },
+        { type:"mcq", prompt:"Will she take her rain coat to school?",
+          options:["Yes, she will.","No, she won't."], answer:"Yes, she will." },
+        { type:"mcq", prompt:"Will she wear her school shoes?",
+          options:["Yes, she will.","No, she won't."], answer:"No, she won't." },
+        { type:"mcq", prompt:"Will she wear her school uniform?",
+          options:["Yes, she will.","No, she won't."], answer:"No, she won't." },
+        { type:"mcq", prompt:"Will she take an umbrella?",
+          options:["Yes, she will.","No, she won't."], answer:"Yes, she will." },
+        { type:"mcq", prompt:"Will she take her rain boots?",
+          options:["Yes, she will.","No, she won't."], answer:"Yes, she will." },
+      ]
+    },
+    {
+      title: "Section D · Philip's Concert",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit7-violin.png" alt="A boy called Philip playing the violin on a stage under a spotlight">
+        <p class="illustration-caption">"Next Thursday, Philip won't go to school as usual" is done for you. Complete the story with will or won't.</p>`,
+      questions: [
+        { type:"text", prompt:"Instead, he ____ play in an important concert.", accept:["will"] },
+        { type:"text", prompt:"He ____ stand on a stage with other children and play music.", accept:["will"] },
+        { type:"text", prompt:"He ____ wear his normal school uniform.", accept:["won't"] },
+        { type:"text", prompt:"Philip hopes that, one day, he ____ play the violin in a proper orchestra.", accept:["will"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

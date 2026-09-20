@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 2 – Units 4–6</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Review 2</span>
+    <h1>Units 4–6 Review 📚</h1>
+    <p>Whose Jacket Is This? · Go Back to the Roundabout · The Best Bed! · Fluency Time 2</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This review brings together Fluency Time 2 (phone calls) and vocabulary/grammar from Units 4, 5 and 6. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Sandra Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Review 2 · Units 4–6</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Review 2 – Units 4–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Fluency Time 2 — Order the Dialogue",
+      points: 6,
+      intro:`<img class="illustration" src="images/review2-dialogue.png" alt="Seven speech bubbles from a phone call: Sandra asks to speak to Gaby, Grandma answers and asks who's calling, and Gaby comes to the phone">
+        <p class="illustration-caption">"1 Hello. This is 638721." (Grandma answers the phone) is done for you. Put the rest of the call in order.</p>`,
+      questions: [
+        { type:"mcq", prompt:"What does Sandra say after Grandma answers the phone (line 2)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"Hi. Can I speak to Gaby, please?" },
+        { type:"mcq", prompt:"What does Grandma say next (line 3)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"Yes, of course. Who's calling, please?" },
+        { type:"mcq", prompt:"What does Sandra say next (line 4)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"It's Sandra here." },
+        { type:"mcq", prompt:"What does Grandma say next (line 5)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"Hold on a minute, please." },
+        { type:"mcq", prompt:"What does Grandma say next (line 6)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"Gaby. It's Sandra on the phone for you." },
+        { type:"mcq", prompt:"What does Gaby say last (line 7)?",
+          options:["Hi. Can I speak to Gaby, please?","Yes, of course. Who's calling, please?","It's Sandra here.","Hold on a minute, please.","Gaby. It's Sandra on the phone for you.","I'm coming, Grandma."],
+          answer:"I'm coming, Grandma." },
+      ]
+    },
+    {
+      title: "Section B · Fluency Time 2 — Completing a Phone Call",
+      points: 5,
+      intro:`<img class="illustration" src="images/review2-phonecall.png" alt="A four-panel comic: Mum answers the phone, talks to Peter, asks him to hold on, then calls Alif to the phone">
+        <p class="illustration-caption">"Mum: Hello" is done for you. Complete the rest of the call.</p>`,
+      questions: [
+        { type:"text", prompt:"Peter: Hello. Can I ____ to Alif, please?", accept:["speak"] },
+        { type:"text", prompt:"Mum: Yes, of course. Who's ____, please?", accept:["calling"] },
+        { type:"text", prompt:"Peter: It's Peter ____.", accept:["here"] },
+        { type:"text", prompt:"Mum: ____ a minute, please. (asking Peter to wait)", accept:["hold on"] },
+        { type:"text", prompt:"Mum: Alif. The phone. It's for ____!", accept:["you"] },
+      ]
+    },
+    {
+      title: "Section C · Verbs, Adjectives and Nouns (Units 4–6)",
+      points: 4,
+      intro:`<img class="illustration" src="images/review2-wordtypes.png" alt="Six pictures with underlined words: a trophy, a bed, a comfortable chair, bouncing a basketball, a broken cheap toy, and turning left at a roundabout">
+        <p class="illustration-caption">"won" (a verb) is done for you. What type of word is each underlined word?</p>`,
+      questions: [
+        { type:"mcq", prompt:"trophy — is this a verb, an adjective, or a noun?",
+          options:["Verb","Adjective","Noun"], answer:"Noun" },
+        { type:"mcq", prompt:"hard — is this a verb, an adjective, or a noun?",
+          options:["Verb","Adjective","Noun"], answer:"Adjective" },
+        { type:"mcq", prompt:"bounce — is this a verb, an adjective, or a noun?",
+          options:["Verb","Adjective","Noun"], answer:"Verb" },
+        { type:"mcq", prompt:"roundabout — is this a verb, an adjective, or a noun?",
+          options:["Verb","Adjective","Noun"], answer:"Noun" },
+      ]
+    },
+    {
+      title: "Section D · Circle the Odd One Out",
+      points: 6,
+      intro:`<p class="illustration-caption">"ladder" is the odd one out in "bounce, ladder, catch, throw" — the others are all things you do with a ball.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["bounce","ladder","catch","throw"], answer:"ladder" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["left","right","straight on","early"], answer:"early" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["repair","cheap","expensive","modern"], answer:"repair" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["map","dig","prepare","move"], answer:"map" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["traffic light","petrol station","lazy","roundabout"], answer:"lazy" },
+        { type:"mcq", prompt:"Which is the odd one out?",
+          options:["shadow","late","puppet","screen"], answer:"late" },
+      ]
+    },
+    {
+      title: "Section E · Had to or Have to",
+      points: 4,
+      intro:`<p class="illustration-caption">"Yesterday, I had to go home from school early because I was ill" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"To get to the shop, you ____ turn right at the traffic lights.", accept:["have to"] },
+        { type:"text", prompt:"He didn't do well in his homework and ____ do it again.", accept:["had to"] },
+        { type:"text", prompt:"When they are at the roundabout, they ____ turn left.", accept:["have to"] },
+        { type:"text", prompt:"Next week, we ____ finish the project.", accept:["have to"] },
+      ]
+    },
+    {
+      title: "Section F · Adverbs of Manner",
+      points: 3,
+      intro:`<p class="illustration-caption">"I play football well." is done for you. (well is the adverb of good)</p>`,
+      questions: [
+        { type:"mcq", prompt:"What is the adverb form of 'slow'?",
+          options:["slow","slowly"], answer:"slowly" },
+        { type:"mcq", prompt:"What is the adverb form of 'good'?",
+          options:["good","well"], answer:"well" },
+        { type:"mcq", prompt:"What is the adverb form of 'careful'?",
+          options:["careful","carefully"], answer:"carefully" },
+      ]
+    },
+    {
+      title: "Section G · Phonics — ll, ck, rr or c?",
+      points: 2,
+      intro:`<img class="illustration" src="images/review2-phonics.png" alt="Six pictures with words missing double letters: carrots and cherries, shells and rocks at the beach, a clock and a bell, tomorrow and a comic, ducklings and a neck, music at a picnic">
+        <p class="illustration-caption">Choose the missing letters for each word.</p>`,
+      questions: [
+        { type:"mcq", prompt:"she__s (things you find on the beach, with hard round shapes)",
+          options:["ll","ck","rr","c"], answer:"ll" },
+        { type:"mcq", prompt:"musi__ (sounds like songs, played at a picnic)",
+          options:["ll","ck","rr","c"], answer:"c" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

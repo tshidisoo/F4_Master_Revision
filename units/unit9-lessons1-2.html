@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9 – Lessons 1 &amp; 2 | Something New to Watch!</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 9</span>
+    <h1>Something New to Watch! 📺</h1>
+    <p>Lessons 1 &amp; 2 — TV Words &amp; The Infinitive of Purpose</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Bart Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 9 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 9 – Lessons 1 & 2 (TV words; the infinitive of purpose)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · TV Words",
+      points: 6,
+      intro:`<img class="illustration" src="images/unit9-tvwords.png" alt="A TV screen surrounded by a word-snake spelling: mobile, documentary, camcorder, news, radio, channel, advert, programmes, cartoon, control">
+        <p class="illustration-caption">"When you switch on the TV, you can see lots of different programmes" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"A programme for children with moving pictures.", accept:["cartoon"] },
+        { type:"text", prompt:"This tells you about things you can buy.", accept:["advert"] },
+        { type:"text", prompt:"To know what is happening in the world right now, you need to watch the ...", accept:["news"] },
+        { type:"text", prompt:"This TV programme gives you information.", accept:["documentary"] },
+        { type:"text", prompt:"You listen to music and news on this.", accept:["radio"] },
+        { type:"text", prompt:"You can use your ... phone when you are out.", accept:["mobile"] },
+      ]
+    },
+    {
+      title: "Section B · Watching TV Together",
+      points: 4,
+      intro:`<img class="illustration" src="images/unit9-familytv.png" alt="A family sitting together on the sofa, watching TV">
+        <p class="illustration-caption">Complete the story about a family evening watching TV.</p>`,
+      questions: [
+        { type:"text", prompt:"When you switch on the TV, you can see lots of different ____.", accept:["programmes","programs"] },
+        { type:"text", prompt:"Mum picked up the remote ____ and changed the channel.", accept:["control"] },
+        { type:"text", prompt:"Mum changed the ____ to watch a documentary about history.", accept:["channel"] },
+        { type:"text", prompt:"After dinner, we all watched a DVD of our family holiday on our new ____.", accept:["camcorder"] },
+      ]
+    },
+    {
+      title: "Section C · Find the Infinitive of Purpose",
+      points: 5,
+      intro:`<p class="illustration-caption">"I went to the cinema to watch a film" is done for you — "to watch" is the infinitive of purpose. Write the infinitive phrase in each sentence.</p>`,
+      questions: [
+        { type:"text", prompt:"She went into the kitchen to eat some food.", accept:["to eat"] },
+        { type:"text", prompt:"My dad came into my room to help with my homework.", accept:["to help"] },
+        { type:"text", prompt:"I put my books on the shelves to tidy my room.", accept:["to tidy"] },
+        { type:"text", prompt:"I phoned my grandma to say, \"Happy birthday.\"", accept:["to say"] },
+        { type:"text", prompt:"My dad used the camcorder to film our party.", accept:["to film"] },
+      ]
+    },
+    {
+      title: "Section D · Complete with an Infinitive of Purpose",
+      points: 5,
+      intro:`<img class="illustration" src="images/unit9-infinitive.png" alt="Six scenes: a boy entering the living room, a girl watching a space documentary, two children cycling, a girl using a dictionary, two people washing vegetables, and a boy at a supermarket ice cream stand">
+        <p class="illustration-caption">"I went to the living room to watch TV" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"She's watching this documentary ____.",
+          options:["to learn about space","to buy a ticket","to play a game"], answer:"to learn about space" },
+        { type:"mcq", prompt:"They went to the park ____.",
+          options:["to ride their bikes","to buy vegetables","to watch a film"], answer:"to ride their bikes" },
+        { type:"mcq", prompt:"She used the dictionary ____.",
+          options:["to look up a word","to cook dinner","to watch TV"], answer:"to look up a word" },
+        { type:"mcq", prompt:"We're washing the vegetables ____.",
+          options:["to cook dinner","to play football","to watch a documentary"], answer:"to cook dinner" },
+        { type:"mcq", prompt:"He went to the supermarket ____.",
+          options:["to buy ice cream","to ride a bike","to phone his grandma"], answer:"to buy ice cream" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

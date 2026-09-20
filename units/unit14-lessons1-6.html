@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 14 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 14 · Skills Time!</span>
+    <h1>We Were Fishing 🎣</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 14: family words, the past continuous, dates, phonics (tion and shion), reading, and poem rhymes. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Martha Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 14 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 14 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Family Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"A married man is a ____.", accept:["husband"] },
+        { type:"text", prompt:"The son of your brother or sister is your ____.", accept:["nephew"] },
+        { type:"text", prompt:"When a man gets married, he has a new ____.", accept:["wife"] },
+        { type:"text", prompt:"When parents have a girl child, she is their ____.", accept:["daughter"] },
+        { type:"text", prompt:"Your brother's or sister's daughter is your ____.", accept:["niece"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Past Continuous",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"I was ____ cake together with my grandma. (eat)", options:["taking","eating"], answer:"eating" },
+        { type:"mcq", prompt:"I was ____ in the park with my brother and sister. (play)", options:["shopping","playing"], answer:"playing" },
+        { type:"text", prompt:"At quarter past nine, my dad ____ a newspaper. (read)", accept:["was reading"] },
+        { type:"text", prompt:"At half past ten, my mum ____ ice creams for us. (buy)", accept:["was buying"] },
+        { type:"text", prompt:"At three o'clock, Jack ____ a model robot. (make)", accept:["was making"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Dates: In or On?",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"When's Sandra's birthday? (27th August)", accept:["it's on the twenty-seventh of august","on the twenty-seventh of august"] },
+        { type:"mcq", prompt:"She was born ____ the third of July.", options:["in","on"], answer:"on" },
+        { type:"mcq", prompt:"My grandma was born ____ 1950.", options:["in","on"], answer:"in" },
+        { type:"mcq", prompt:"Her birthday is ____ the tenth of February.", options:["in","on"], answer:"on" },
+        { type:"text", prompt:"When's Ahmed's birthday? (22nd May)", accept:["it's on the twenty-second of may","on the twenty-second of may"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — tion or shion?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"fa____", options:["tion","shion"], answer:"shion" },
+        { type:"mcq", prompt:"invita____", options:["tion","shion"], answer:"tion" },
+        { type:"mcq", prompt:"subtrac____", options:["tion","shion"], answer:"tion" },
+        { type:"mcq", prompt:"cu____", options:["tion","shion"], answer:"shion" },
+        { type:"mcq", prompt:"ques____", options:["tion","shion"], answer:"tion" },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — My Relatives Are Coming",
+      points: 5,
+      intro:`<p class="illustration-caption">A crossword about family and visitors.</p>`,
+      questions: [
+        { type:"text", prompt:"When people wait for a bus, they make a ____.", accept:["queue"] },
+        { type:"text", prompt:"When people you like go away, you ____ them.", accept:["miss"] },
+        { type:"text", prompt:"All the people in your family.", accept:["relatives"] },
+        { type:"text", prompt:"A very young child who is learning to walk.", accept:["toddler"] },
+        { type:"text", prompt:"It's in the middle of your leg and you bend it when you walk.", accept:["knee"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Poem Rhymes",
+      points: 5,
+      intro:`<p class="illustration-caption">"floor" rhymes with "door" — that one's done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Which word rhymes with 'stay'?", accept:["day"] },
+        { type:"text", prompt:"Which word rhymes with 'squeeze'?", accept:["knees"] },
+        { type:"text", prompt:"Which word rhymes with 'Kate'?", accept:["wait"] },
+        { type:"mcq", prompt:"Which word rhymes with 'everyone'?", options:["fun","day","past"], answer:"fun" },
+        { type:"mcq", prompt:"Which word rhymes with 'ring'?", options:["sing","fast","they"], answer:"sing" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

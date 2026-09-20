@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 15 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 15 · Skills Time!</span>
+    <h1>Good News, Bad News 📰</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 15: jobs words, past continuous/past simple, there/their/they're, phonics (homophones), reading Three Wishes, and speech marks. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Graham Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 15 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 15 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Jobs Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"A person in an office or factory who gives instructions.", accept:["boss"] },
+        { type:"text", prompt:"A person in an office who types and organizes things.", accept:["secretary"] },
+        { type:"text", prompt:"A person who writes for a newspaper or magazine.", accept:["journalist"] },
+        { type:"text", prompt:"This person is a doctor for animals.", accept:["vet"] },
+        { type:"text", prompt:"This person looks after your teeth.", accept:["dentist"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Past Continuous and Past Simple",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"What was Mum doing when the children arrived home from school?",
+          options:["cooking","cleaning","sleeping"], answer:"cooking" },
+        { type:"text", prompt:"He was walking to school when he ____. (fall over)", accept:["fell over"] },
+        { type:"text", prompt:"They were playing football when it ____. (start to rain)", accept:["started to rain"] },
+        { type:"mcq", prompt:"What was everyone doing when Grandma rang the doorbell?",
+          options:["eating","sleeping","playing"], answer:"eating" },
+        { type:"text", prompt:"She was watching TV when her dad ____. (come in)", accept:["came in"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · There, Their or They're?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"You can see that ____ really happy. (they are)", options:["there","their","they're"], answer:"they're" },
+        { type:"mcq", prompt:"Look over ____. I can see my friends.", options:["there","their","they're"], answer:"there" },
+        { type:"mcq", prompt:"____ are two beds in this bedroom.", options:["There","Their","They're"], answer:"There" },
+        { type:"mcq", prompt:"Both of ____ beds have got warm quilts.", options:["there","their","they're"], answer:"their" },
+        { type:"mcq", prompt:"____ flying a kite.", options:["There","Their","They're"], answer:"They're" },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — Homophones",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"The large body of salt water.", options:["see","sea"], answer:"sea" },
+        { type:"mcq", prompt:"In this place.", options:["hear","here"], answer:"here" },
+        { type:"mcq", prompt:"To put clothes on your body.", options:["wear","where"], answer:"wear" },
+        { type:"text", prompt:"To put words on paper with a pen.", accept:["write"] },
+        { type:"text", prompt:"Correct, or the opposite of left.", accept:["right"] },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Three Wishes",
+      points: 5,
+      intro:`<p class="illustration-caption">"A fisherman was out fishing one day, when he met a talking fish" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"It ____ to him and gave him three wishes. (speak)", accept:["spoke"] },
+        { type:"text", prompt:"He was ____ because fish don't usually speak.", accept:["surprised"] },
+        { type:"text", prompt:"The man thought the sausages were ____.", accept:["delicious"] },
+        { type:"text", prompt:"\"You ____ man,\" she said.", accept:["silly"] },
+        { type:"text", prompt:"They ____ the sausages, but couldn't get them off. (pull)", accept:["pulled"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Speech Marks and Cinderella",
+      points: 5,
+      intro:`<p class="illustration-caption">"'I like writing stories,' said Andy." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"\"What's the time?\" ____ Jimmy.", accept:["asked"] },
+        { type:"text", prompt:"\"I'm really happy,\" ____ Susie.", accept:["said"] },
+        { type:"text", prompt:"The stepsisters were also very ____. (lazy)", accept:["lazy"] },
+        { type:"text", prompt:"Cinderella was very ____. (sad)", accept:["sad"] },
+        { type:"text", prompt:"Suddenly, there was a bright ____ and a fairy appeared. (light)", accept:["light"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 15 – Lessons 1 &amp; 2 | Good News, Bad News</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 15</span>
+    <h1>Good News, Bad News 📰</h1>
+    <p>Lessons 1 &amp; 2 — Jobs Words &amp; Past Continuous/Past Simple</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Graham Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 15 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 15 – Lessons 1 & 2 (Jobs words; past continuous/past simple)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Jobs Words",
+      points: 6,
+      intro:`<p class="illustration-caption">"A place of work with desks, computers and phones. → office" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"A person in an office or factory who gives instructions.", accept:["boss"] },
+        { type:"text", prompt:"A person in an office who types and organizes things.", accept:["secretary"] },
+        { type:"text", prompt:"A person who writes for a newspaper or magazine.", accept:["journalist"] },
+        { type:"text", prompt:"A person who builds or repairs buildings.", accept:["builder"] },
+        { type:"text", prompt:"The first person you meet when you enter a building.", accept:["receptionist"] },
+        { type:"text", prompt:"This person is a doctor for animals.", accept:["vet"] },
+      ]
+    },
+    {
+      title: "Section B · Whose Parents Do What?",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"A person who writes books.", accept:["author"] },
+        { type:"text", prompt:"This person looks after your teeth.", accept:["dentist"] },
+        { type:"text", prompt:"This person can fix your car.", accept:["mechanic"] },
+        { type:"text", prompt:"A place of work with desks, computers and phones is called an ____.", accept:["office"] },
+      ]
+    },
+    {
+      title: "Section C · What Was Happening?",
+      points: 6,
+      intro:`<p class="illustration-caption">"Mum was cooking when the children arrived home from school" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"What were the children doing when the phone rang?",
+          options:["doing their homework","watching TV","eating dinner"], answer:"doing their homework" },
+        { type:"mcq", prompt:"What was everyone doing when Grandma rang the doorbell?",
+          options:["eating","sleeping","playing"], answer:"eating" },
+        { type:"mcq", prompt:"What was Grandma doing when she dropped her glasses?",
+          options:["talking to Mum","cooking dinner","reading a book"], answer:"talking to Mum" },
+        { type:"mcq", prompt:"What was Mum doing when she saw a spider on the floor?",
+          options:["picking up the glasses","cooking dinner","doing homework"], answer:"picking up the glasses" },
+        { type:"mcq", prompt:"What happened when the spider was walking towards her?",
+          options:["Mum screamed","Mum laughed","Mum left"], answer:"Mum screamed" },
+        { type:"mcq", prompt:"What was Mum doing when the children arrived home from school?",
+          options:["cooking","cleaning","sleeping"], answer:"cooking" },
+      ]
+    },
+    {
+      title: "Section D · Interrupted Actions",
+      points: 4,
+      intro:`<p class="illustration-caption">"He was doing his homework when the phone rang" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"He was walking to school when he ____. (fall over)", accept:["fell over"] },
+        { type:"text", prompt:"They were playing football when it ____. (start to rain)", accept:["started to rain"] },
+        { type:"text", prompt:"She was watching TV when her dad ____. (come in)", accept:["came in"] },
+        { type:"mcq", prompt:"What was he doing when the phone rang?",
+          options:["He was doing his homework.","He was watching TV.","He was playing football."], answer:"He was doing his homework." },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

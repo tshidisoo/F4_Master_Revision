@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 5 – Units 13–15</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Review 5</span>
+    <h1>Units 13–15 Review 📚</h1>
+    <p>Can You Help Me? · We Were Fishing · Good News, Bad News · Fluency Time 5</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This review brings together Fluency Time 5 (in the playground) and vocabulary/grammar from Units 13, 14 and 15. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Robbie Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Review 5 · Units 13–15</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Review 5 – Units 13–15 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Fluency Time 5 — In the Playground",
+      points: 6,
+      intro:`<p class="illustration-caption">"Peter: Hi, Robbie. Are you on your own?" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Robbie: Ben is ____ school today.", accept:["off"] },
+        { type:"text", prompt:"Peter: Why is he off ____?", accept:["school"] },
+        { type:"text", prompt:"Robbie: He's got a ____ ache.", accept:["stomach"] },
+        { type:"text", prompt:"Robbie: He ____ too much pizza at the party.", accept:["ate"] },
+        { type:"text", prompt:"Peter: You can play ____ us.", accept:["with"] },
+        { type:"text", prompt:"Robbie: OK. That ____ fun. (sound)", accept:["sounds"] },
+      ]
+    },
+    {
+      title: "Section B · Fluency Time 5 — Write the Sentence",
+      points: 3,
+      intro:`<p class="illustration-caption">"your / on / Are / own / you / ? → Are you on your own?" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"is / My / today / off / friend / school", accept:["my friend is off school today"] },
+        { type:"text", prompt:"play / us / You / with / can", accept:["you can play with us"] },
+        { type:"text", prompt:"want / Do / play / you / to / volleyball / ?", accept:["do you want to play volleyball"] },
+      ]
+    },
+    {
+      title: "Section C · Verbs, Adjectives and Nouns (Units 13–15)",
+      points: 6,
+      intro:`<p class="illustration-caption">"I poured the delicious smoothie out of the blender" — poured (a verb) is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"chopped", options:["Verb","Adjective","Noun"], answer:"Verb" },
+        { type:"mcq", prompt:"delicious", options:["Verb","Adjective","Noun"], answer:"Adjective" },
+        { type:"mcq", prompt:"blender", options:["Verb","Adjective","Noun"], answer:"Noun" },
+        { type:"mcq", prompt:"cute", options:["Verb","Adjective","Noun"], answer:"Adjective" },
+        { type:"mcq", prompt:"fell", options:["Verb","Adjective","Noun"], answer:"Verb" },
+        { type:"mcq", prompt:"knee", options:["Verb","Adjective","Noun"], answer:"Noun" },
+      ]
+    },
+    {
+      title: "Section D · In or On?",
+      points: 3,
+      intro:`<p class="illustration-caption">"My birthday is in February" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"My brother's birthday is ____ 5th June.", options:["in","on"], answer:"on" },
+        { type:"mcq", prompt:"My mum was born ____ 1970.", options:["in","on"], answer:"in" },
+        { type:"mcq", prompt:"My dad's birthday was last week, ____ 10th April.", options:["in","on"], answer:"on" },
+      ]
+    },
+    {
+      title: "Section E · Circle the Odd One Out",
+      points: 6,
+      intro:`<p class="illustration-caption">"toddler" is the odd one out in "toddler, pour, chop, peel" — the others are all things you do to make a smoothie.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which is the odd one out?", options:["daughter","husband","mechanic","nephew"], answer:"mechanic" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["builder","surprise","dentist","author"], answer:"surprise" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["strawberry","mango","sausages","banana"], answer:"sausages" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["fridge","blender","hero","lid"], answer:"hero" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["smoothie","speak","wish for","pull"], answer:"smoothie" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["toddler","pour","chop","peel"], answer:"toddler" },
+      ]
+    },
+    {
+      title: "Section F · Past Continuous",
+      points: 3,
+      intro:`<p class="illustration-caption">"When I got there, my grandma was feeding the chickens" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"The cows ____ grass in a field. (eat)", accept:["were eating"] },
+        { type:"text", prompt:"My grandad ____ a horse. (ride)", accept:["was riding"] },
+        { type:"text", prompt:"The animals ____ a lot of noise! (make)", accept:["were making"] },
+      ]
+    },
+    {
+      title: "Section G · Past Continuous or Past Simple?",
+      points: 3,
+      intro:`<p class="illustration-caption">"When she was sleeping, the alarm rang" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When we ____, Dad arrived. (eat dinner)", accept:["were eating dinner","were eating"] },
+        { type:"text", prompt:"When he ____, the door opened. (watch TV)", accept:["was watching tv","was watching"] },
+        { type:"text", prompt:"When she was playing in the park, ____. (she / fall over)", accept:["she fell over"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

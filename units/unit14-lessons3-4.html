@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 14 – Lessons 3 &amp; 4 | We Were Fishing</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 14</span>
+    <h1>We Were Fishing 🎣</h1>
+    <p>Lessons 3 &amp; 4 — Dates &amp; Was Born; Phonics: tion and shion</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Billy Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 14 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 14 – Lessons 3 & 4 (Dates and was born; phonics: tion and shion)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · When's Their Birthday?",
+      points: 5,
+      intro:`<p class="illustration-caption">Billy: 3rd June · Sandra: 27th August · Carmen: 1st November · James: 23rd March · Ahmed: 22nd May. "When's Billy's birthday? It's on the third of June." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"When's Billy's birthday?", accept:["it's on the third of june","on the third of june"] },
+        { type:"text", prompt:"When's Sandra's birthday?", accept:["it's on the twenty-seventh of august","on the twenty-seventh of august"] },
+        { type:"text", prompt:"When's Ahmed's birthday?", accept:["it's on the twenty-second of may","on the twenty-second of may"] },
+        { type:"text", prompt:"When's Carmen's birthday?", accept:["it's on the first of november","on the first of november"] },
+        { type:"text", prompt:"When's James's birthday?", accept:["it's on the twenty-third of march","on the twenty-third of march"] },
+      ]
+    },
+    {
+      title: "Section B · In or On?",
+      points: 4,
+      intro:`<p class="illustration-caption">"My sister was born in 2009" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"She was born ____ the third of July.", options:["in","on"], answer:"on" },
+        { type:"mcq", prompt:"My brother was born ____ the seventeenth of June 1999.", options:["in","on"], answer:"on" },
+        { type:"mcq", prompt:"My grandma was born ____ 1950.", options:["in","on"], answer:"in" },
+        { type:"mcq", prompt:"Her birthday is ____ the tenth of February.", options:["in","on"], answer:"on" },
+      ]
+    },
+    {
+      title: "Section C · Phonics — tion or shion?",
+      points: 5,
+      intro:`<p class="illustration-caption">"addition" ends in -tion — that one's done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"fa____", options:["tion","shion"], answer:"shion" },
+        { type:"mcq", prompt:"invita____", options:["tion","shion"], answer:"tion" },
+        { type:"mcq", prompt:"subtrac____", options:["tion","shion"], answer:"tion" },
+        { type:"mcq", prompt:"cu____", options:["tion","shion"], answer:"shion" },
+        { type:"mcq", prompt:"ques____", options:["tion","shion"], answer:"tion" },
+      ]
+    },
+    {
+      title: "Section D · tion and shion Words",
+      points: 6,
+      questions: [
+        { type:"text", prompt:"Something you ask when you want to know information.", accept:["question"] },
+        { type:"text", prompt:"A soft pillow-like pad you sit or lean on.", accept:["cushion"] },
+        { type:"text", prompt:"The mathematical operation of adding numbers together.", accept:["addition"] },
+        { type:"text", prompt:"The mathematical operation of taking one number away from another.", accept:["subtraction"] },
+        { type:"text", prompt:"The popular styles of clothes people wear.", accept:["fashion"] },
+        { type:"text", prompt:"A card or message asking someone to come to an event.", accept:["invitation"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

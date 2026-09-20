@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 14 – Lessons 1 &amp; 2 | We Were Fishing</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 14</span>
+    <h1>We Were Fishing 🎣</h1>
+    <p>Lessons 1 &amp; 2 — Family Words &amp; Past Continuous</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Martha Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 14 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 14 – Lessons 1 & 2 (Family words; past continuous)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Family Words",
+      points: 6,
+      intro:`<p class="illustration-caption">"When parents have a boy child, he is their son" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"A married man is a ____.", accept:["husband"] },
+        { type:"text", prompt:"The son of your brother or sister is your ____.", accept:["nephew"] },
+        { type:"text", prompt:"When a man gets married, he has a new ____.", accept:["wife"] },
+        { type:"text", prompt:"The mother of your husband or wife is your ____.", accept:["mother-in-law"] },
+        { type:"text", prompt:"When parents have a girl child, she is their ____.", accept:["daughter"] },
+        { type:"text", prompt:"Your brother's or sister's daughter is your ____.", accept:["niece"] },
+      ]
+    },
+    {
+      title: "Section B · Mrs Sanders' Family Photos",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"Your husband's or wife's dad is your ____.", accept:["father-in-law"] },
+        { type:"text", prompt:"The mother of your husband or wife is your ____.", accept:["mother-in-law"] },
+        { type:"text", prompt:"Your brother's or sister's daughter is your ____.", accept:["niece"] },
+        { type:"text", prompt:"When a man gets married, he has a new ____.", accept:["wife"] },
+      ]
+    },
+    {
+      title: "Section C · What Were They Doing?",
+      points: 5,
+      intro:`<p class="illustration-caption">"I was visiting my grandma" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"I was ____ cake together with my grandma.", options:["taking","eating"], answer:"eating" },
+        { type:"mcq", prompt:"I was ____ in the park with my brother and sister.", options:["shopping","playing"], answer:"playing" },
+        { type:"mcq", prompt:"I was ____ with my parents at the supermarket.", options:["seeing","shopping"], answer:"shopping" },
+        { type:"mcq", prompt:"I was in a shop. I was ____ my birthday present.", options:["eating","buying"], answer:"buying" },
+        { type:"mcq", prompt:"I was outside. I was ____ photos with my new camera.", options:["taking","riding"], answer:"taking" },
+      ]
+    },
+    {
+      title: "Section D · Past Continuous — Yesterday's Photos",
+      points: 5,
+      intro:`<p class="illustration-caption">"At nine o'clock, my brother and sister were watching TV" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"At quarter past nine, my dad ____ a newspaper. (read)", accept:["was reading"] },
+        { type:"text", prompt:"At ten o'clock, Jack and Lola ____ their bikes in the park. (ride)", accept:["were riding"] },
+        { type:"text", prompt:"At half past ten, my mum ____ ice creams for us at the park. (buy)", accept:["was buying"] },
+        { type:"text", prompt:"At half past one, we ____ lunch together at home. (eat)", accept:["were eating"] },
+        { type:"text", prompt:"At three o'clock, Jack ____ a model robot. (make)", accept:["was making"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

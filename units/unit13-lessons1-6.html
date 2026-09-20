@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 13 – Skills Time! Full Review (Lessons 1–6)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 13 · Skills Time!</span>
+    <h1>Can You Help Me? 🥤</h1>
+    <p>Full Review — Lessons 1–6 · 30 marks</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This test brings together everything from Unit 13: smoothie words, object pronouns, who/which, phonics (el and il), reading about young heroes, and sub clauses. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Milly Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 13 · Skills Time · Lessons 1–6 full review</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 13 – Full Review, Lessons 1–6 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Lesson 1 · Making Smoothies — Words",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"You put food and drink in here to keep it cold.", accept:["fridge"] },
+        { type:"text", prompt:"This turns solid food into smooth liquids.", accept:["blender"] },
+        { type:"text", prompt:"When you put a drink into a glass.", accept:["pour"] },
+        { type:"text", prompt:"A drink which comes from cows. It has a lot of calcium.", accept:["milk"] },
+        { type:"text", prompt:"The top of a blender. It stops things from coming out.", accept:["lid"] },
+      ]
+    },
+    {
+      title: "Lesson 2 · Object Pronouns",
+      points: 5,
+      intro:`<p class="illustration-caption">"I can see Milly. → I can see her over there." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"The apples are over there.",
+          options:["Can you put them on this plate?","Please help me.","Can you find us?"],
+          answer:"Can you put them on this plate?" },
+        { type:"mcq", prompt:"I need some help.",
+          options:["Please help me.","Can you find us?","I can't see it anywhere."],
+          answer:"Please help me." },
+        { type:"text", prompt:"We're looking for the station, but we can't find ____.", accept:["it"] },
+        { type:"text", prompt:"Can you help ____, please?", accept:["us"] },
+        { type:"text", prompt:"No, I can't see ____ anywhere. (aunt and uncle)", accept:["them"] },
+      ]
+    },
+    {
+      title: "Lesson 3 · Who or Which?",
+      points: 5,
+      questions: [
+        { type:"mcq", prompt:"These are the shoes ____ got wet in the rain.", options:["who","which"], answer:"which" },
+        { type:"mcq", prompt:"This is the girl ____ helped me.", options:["who","which"], answer:"who" },
+        { type:"text", prompt:"This is the pen. It was lost.", accept:["this is the pen which was lost"] },
+        { type:"text", prompt:"This is the boy. He bought the biscuits.", accept:["this is the boy who bought the biscuits"] },
+        { type:"text", prompt:"This is my uncle. He lives in the USA.", accept:["this is my uncle who lives in the usa"] },
+      ]
+    },
+    {
+      title: "Lesson 4 · Phonics — el or il?",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"April, pupil, towel — which is the odd one out?", accept:["towel"] },
+        { type:"text", prompt:"travel, lentil, pencil — which is the odd one out?", accept:["travel"] },
+        { type:"text", prompt:"camel, tunnel, pupil — which is the odd one out?", accept:["pupil"] },
+        { type:"text", prompt:"camel, lentil, travel — which is the odd one out?", accept:["lentil"] },
+        { type:"text", prompt:"camel, pencil, April — which is the odd one out?", accept:["camel"] },
+      ]
+    },
+    {
+      title: "Lesson 5 · Reading — Young Heroes",
+      points: 5,
+      intro:`<p class="illustration-caption">Ryan Hreljac wanted to help and raised money for a well. Charlie started a charity after learning about an earthquake on the news.</p>`,
+      questions: [
+        { type:"text", prompt:"When you go out on a bike for charity, you go on a ____.", accept:["bike ride"] },
+        { type:"text", prompt:"To make money to help people is to ____ money.", accept:["raise"] },
+        { type:"text", prompt:"An organisation that helps people who are poor or ill is called a ____.", accept:["charity"] },
+        { type:"text", prompt:"A place in the ground where people get water to drink is a ____.", accept:["well"] },
+        { type:"text", prompt:"A very brave person who helps other people is a ____.", accept:["hero"] },
+      ]
+    },
+    {
+      title: "Lesson 6 · Sub Clauses and Jobs",
+      points: 5,
+      intro:`<p class="illustration-caption">"My friend, who lives next door, has a new baby sister" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This umbrella broke last night. (add: which is very old)", accept:["this umbrella, which is very old, broke last night"] },
+        { type:"text", prompt:"Mandy's mum is a nurse. (add: who works in a hospital)", accept:["mandy's mum, who works in a hospital, is a nurse"] },
+        { type:"mcq", prompt:"\"teach\" belongs to which job?", options:["Teacher","Doctor"], answer:"Teacher" },
+        { type:"mcq", prompt:"\"medicine\" belongs to which job?", options:["Teacher","Doctor"], answer:"Doctor" },
+        { type:"mcq", prompt:"\"pupils\" belongs to which job?", options:["Teacher","Doctor"], answer:"Teacher" },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

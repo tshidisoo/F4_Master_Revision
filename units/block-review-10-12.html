@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 4 – Units 10–12</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Review 4</span>
+    <h1>Units 10–12 Review 📚</h1>
+    <p>I've Printed My Homework! · Have You Ever Been...? · What's the Matter? · Fluency Time 4</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>This review brings together Fluency Time 4 (describing accidents) and vocabulary/grammar from Units 10, 11 and 12. There are <strong>30 questions</strong> worth 1 mark each (30 marks total).</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Tilly Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Review 4 · Units 10–12</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Review 4 – Units 10–12 (30 marks)",
+  totalMarks: 30,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Fluency Time 4 — At School",
+      points: 5,
+      intro:`<p class="illustration-caption">"Teacher: What's the matter?" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Peter: James fell over. He's ____ his foot.", accept:["hurt"] },
+        { type:"text", prompt:"Teacher: Where did it ____?", accept:["happen"] },
+        { type:"text", prompt:"Teacher: ____ James to the school nurse, please.", accept:["take"] },
+        { type:"text", prompt:"Tilly: Mum, come quickly. I've hurt my ____.", accept:["arm"] },
+        { type:"text", prompt:"Tilly: I ____ over.", accept:["fell"] },
+      ]
+    },
+    {
+      title: "Section B · Fluency Time 4 — Write the Sentence",
+      points: 3,
+      intro:`<p class="illustration-caption">"(Jack / hurt / leg) → Jack has hurt his leg." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"(She / hurt / finger)", accept:["she has hurt her finger","she's hurt her finger"] },
+        { type:"text", prompt:"(I / fell over / computer room)", accept:["i fell over in the computer room"] },
+        { type:"text", prompt:"(Take / Simon / nurse)", accept:["take simon to the nurse"] },
+      ]
+    },
+    {
+      title: "Section C · Computers and Email",
+      points: 5,
+      intro:`<p class="illustration-caption">"I sent an email." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"He attached a ____.",
+          options:["email","photo","email address","Internet","your document onto the memory stick","\"save.\""], answer:"photo" },
+        { type:"mcq", prompt:"She's writing the ____.",
+          options:["email","photo","email address","Internet","your document onto the memory stick","\"save.\""], answer:"email address" },
+        { type:"mcq", prompt:"I'm searching the ____.",
+          options:["email","photo","email address","Internet","your document onto the memory stick","\"save.\""], answer:"Internet" },
+        { type:"mcq", prompt:"Don't forget to save ____.",
+          options:["email","photo","email address","Internet","your document onto the memory stick","\"save.\""], answer:"your document onto the memory stick" },
+        { type:"mcq", prompt:"To save your document, click on ____.",
+          options:["email","photo","email address","Internet","your document onto the memory stick","\"save.\""], answer:"\"save.\"" },
+      ]
+    },
+    {
+      title: "Section D · Verbs — Feeling Ill",
+      points: 4,
+      intro:`<p class="illustration-caption">"Last night, I was ill. I had a bad headache." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"I also ____ sick. (feel)", accept:["felt"] },
+        { type:"text", prompt:"I also had a sore throat and needed to ____ my nose all the time. (blow)", accept:["blow"] },
+        { type:"text", prompt:"Mum said I had a bad cold. I ____ some medicine and rested. (take)", accept:["took"] },
+        { type:"text", prompt:"I want to ____ healthier, so I will eat lots of fruit. (be)", accept:["be"] },
+      ]
+    },
+    {
+      title: "Section E · Circle the Odd One Out",
+      points: 6,
+      intro:`<p class="illustration-caption">"cave" is the odd one out in "website, cave, Internet, email" — the others are all things you find on a computer.</p>`,
+      questions: [
+        { type:"mcq", prompt:"Which is the odd one out?", options:["village","town","city","frozen"], answer:"frozen" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["sugar","desert","ocean","rainforest"], answer:"sugar" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["cabbage","sardines","cough","crisps"], answer:"cough" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["earache","headache","sore throat","message"], answer:"message" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["printer","summit","speakers","keyboard"], answer:"summit" },
+        { type:"mcq", prompt:"Which is the odd one out?", options:["website","cave","Internet","email"], answer:"cave" },
+      ]
+    },
+    {
+      title: "Section F · Present Perfect",
+      points: 4,
+      intro:`<p class="illustration-caption">"Katie has been to a rainforest." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"Jack and Max ____ their hands. (wash)", accept:["have washed"] },
+        { type:"text", prompt:"I ____ all my dinner. (eat)", accept:["have eaten","i've eaten","'ve eaten"] },
+        { type:"text", prompt:"The train ____ at the station. (arrive)", accept:["has arrived"] },
+        { type:"text", prompt:"They ____ their coats. (put on)", accept:["have put on"] },
+      ]
+    },
+    {
+      title: "Section G · Could, Couldn't, Should, Shouldn't",
+      points: 3,
+      intro:`<p class="illustration-caption">"Last night, I was in bed, but I couldn't sleep" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"I turned on the light, so I ____ read my book.", accept:["could"] },
+        { type:"text", prompt:"Mum said, \"You ____ read at night!\"", accept:["shouldn't"] },
+        { type:"text", prompt:"\"You've got school tomorrow, so you really ____ sleep.\"", accept:["should"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

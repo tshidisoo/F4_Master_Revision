@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 13 – Lessons 1 &amp; 2 | Can You Help Me?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="badge">Family and Friends 4 · Unit 13</span>
+    <h1>Can You Help Me? 🥤</h1>
+    <p>Lessons 1 &amp; 2 — Making Smoothies &amp; Object Pronouns</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Milly Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 13 · Lessons 1 &amp; 2 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 13 – Lessons 1 & 2 (Making smoothies; object pronouns)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Making Smoothies — Words",
+      points: 6,
+      intro:`<p class="illustration-caption">"A drink made from fruit and milk which is made in a blender. → smoothie" is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"You put food and drink in here to keep it cold.", accept:["fridge"] },
+        { type:"text", prompt:"This turns solid food into smooth liquids. You use it to make smoothies and soups.", accept:["blender"] },
+        { type:"text", prompt:"A soft, orange fruit with green skin.", accept:["kiwi"] },
+        { type:"text", prompt:"When you put a drink into a glass.", accept:["pour"] },
+        { type:"text", prompt:"A drink which comes from cows. It has a lot of calcium.", accept:["milk"] },
+        { type:"text", prompt:"The top of a blender. It stops things from coming out.", accept:["lid"] },
+      ]
+    },
+    {
+      title: "Section B · Making Smoothies — The Story",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"My brother's favourite fruit are little red ____.", accept:["strawberries","strawberry"] },
+        { type:"text", prompt:"He ____ them with a knife when we make smoothies. (chop)", accept:["chops"] },
+        { type:"text", prompt:"You have to take off the skin and it is hard to ____ kiwi.", accept:["peel"] },
+        { type:"text", prompt:"A drink made from fruit and milk, made in a blender, is called a ____.", accept:["smoothie"] },
+      ]
+    },
+    {
+      title: "Section C · Match the Sentences",
+      points: 6,
+      intro:`<p class="illustration-caption">"I can see Milly. → I can see her over there." is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"The apples are over there.",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"Can you put them on this plate?" },
+        { type:"mcq", prompt:"I'm going to help Dad.",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"I'm going to help him wash the car." },
+        { type:"mcq", prompt:"I can't find my bag.",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"I can't see it anywhere." },
+        { type:"mcq", prompt:"I need some help.",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"Please help me." },
+        { type:"mcq", prompt:"Ricky and I are in this photo.",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"Can you find us?" },
+        { type:"mcq", prompt:"Do you have a problem?",
+          options:["Can you put them on this plate?","I'm going to help him wash the car.","I can't see it anywhere.","Please help me.","Can you find us?","Can I help you?"],
+          answer:"Can I help you?" },
+      ]
+    },
+    {
+      title: "Section D · Lost — Object Pronouns",
+      points: 4,
+      intro:`<p class="illustration-caption">A boy and his mum are lost near a train station.</p>`,
+      questions: [
+        { type:"text", prompt:"We're looking for the station, but we can't find ____.", accept:["it"] },
+        { type:"text", prompt:"Can you help ____, please?", accept:["us"] },
+        { type:"text", prompt:"No, I can't see ____ anywhere. (aunt and uncle)", accept:["them"] },
+        { type:"text", prompt:"Thank ____ so much for your help.", accept:["you"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

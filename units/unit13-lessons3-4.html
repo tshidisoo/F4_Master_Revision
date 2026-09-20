@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 13 – Lessons 3 &amp; 4 | Can You Help Me?</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 13</span>
+    <h1>Can You Help Me? 🥤</h1>
+    <p>Lessons 3 &amp; 4 — Who/Which &amp; Phonics: el and il Endings</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Jo Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 13 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 13 – Lessons 3 & 4 (Who/which; phonics: el and il endings)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · Who or Which?",
+      points: 5,
+      intro:`<p class="illustration-caption">"This is the teacher who teaches Primary 4" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"These are the shoes ____ got wet in the rain.", options:["who","which"], answer:"which" },
+        { type:"mcq", prompt:"This is the cup ____ broke.", options:["who","which"], answer:"which" },
+        { type:"mcq", prompt:"This is the girl ____ helped me.", options:["who","which"], answer:"who" },
+        { type:"mcq", prompt:"There is the bus ____ takes us to school.", options:["who","which"], answer:"which" },
+        { type:"mcq", prompt:"This is a doctor ____ works in the hospital.", options:["who","which"], answer:"who" },
+      ]
+    },
+    {
+      title: "Section B · Write with Who or Which",
+      points: 4,
+      intro:`<p class="illustration-caption">"Jo is the girl. She won the competition. → Jo is the girl who won the competition." is done for you.</p>`,
+      questions: [
+        { type:"text", prompt:"This is the pen. It was lost.", accept:["this is the pen which was lost"] },
+        { type:"text", prompt:"This is the T-shirt. It's too small.", accept:["this is the t-shirt which is too small"] },
+        { type:"text", prompt:"This is the boy. He bought the biscuits.", accept:["this is the boy who bought the biscuits"] },
+        { type:"text", prompt:"This is my uncle. He lives in the USA.", accept:["this is my uncle who lives in the usa"] },
+      ]
+    },
+    {
+      title: "Section C · Phonics — Find the Odd One Out",
+      points: 5,
+      intro:`<p class="illustration-caption">"tunnel, pencil, camel — pencil is the odd one out" is done for you (it ends in -il, not -el).</p>`,
+      questions: [
+        { type:"text", prompt:"April, pupil, towel — which is the odd one out?", accept:["towel"] },
+        { type:"text", prompt:"travel, lentil, pencil — which is the odd one out?", accept:["travel"] },
+        { type:"text", prompt:"camel, tunnel, pupil — which is the odd one out?", accept:["pupil"] },
+        { type:"text", prompt:"camel, lentil, travel — which is the odd one out?", accept:["lentil"] },
+        { type:"text", prompt:"camel, pencil, April — which is the odd one out?", accept:["camel"] },
+      ]
+    },
+    {
+      title: "Section D · el and il Words",
+      points: 6,
+      questions: [
+        { type:"text", prompt:"A long underground passage, often for trains or cars.", accept:["tunnel"] },
+        { type:"text", prompt:"You write with this — it has lead inside and can be sharpened.", accept:["pencil"] },
+        { type:"text", prompt:"A desert animal with one or two humps on its back.", accept:["camel"] },
+        { type:"text", prompt:"You dry yourself with this after a shower.", accept:["towel"] },
+        { type:"text", prompt:"A student in a school class.", accept:["pupil"] },
+        { type:"text", prompt:"A small type of bean, often used in soups.", accept:["lentil"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

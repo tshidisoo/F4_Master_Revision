@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 15 – Lessons 3 &amp; 4 | Good News, Bad News</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+  header.top .badge{color:#fff;}
+  .section-title{background:var(--red);}
+  .question .qnum{color:var(--teal-dark);}
+  .options label:hover{border-color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top theme-cool">
+    <span class="badge">Family and Friends 4 · Unit 15</span>
+    <h1>Good News, Bad News 📰</h1>
+    <p>Lessons 3 &amp; 4 — There/Their/They're &amp; Phonics: Homophones</p>
+  </header>
+
+  <div id="name-screen" class="card">
+    <h2>Before you start</h2>
+    <p>Write your full name so your teacher knows whose test this is. There are <strong>20 questions</strong> worth 1 mark each (20 marks total). Read carefully and do your best!</p>
+    <label for="student-name"><strong>Your name</strong></label>
+    <input type="text" id="student-name" placeholder="e.g. Susie Turner" autocomplete="off">
+    <div id="name-error" style="color:var(--red);font-size:14px;margin:-10px 0 14px;display:none;">Please write your name before you start.</div>
+    <button class="btn" id="start-btn">Start the test →</button>
+  </div>
+
+  <form id="quiz-form" class="hidden"></form>
+
+  <div id="results" class="hidden"></div>
+
+  <footer>Family and Friends 4 · Unit 15 · Lessons 3 &amp; 4 practice exercise</footer>
+</div>
+
+<script>
+window.QUIZ_CONFIG = {
+  formspreeUrl: "https://formspree.io/f/mjybbpky",
+  lessonSet: "Unit 15 – Lessons 3 & 4 (There/their/they're; phonics: homophones)",
+  totalMarks: 20,
+  backLink: "../index.html",
+  sections: [
+    {
+      title: "Section A · There, Their or They're?",
+      points: 5,
+      intro:`<p class="illustration-caption">"Look at the photo of my parents on their wedding day" is done for you.</p>`,
+      questions: [
+        { type:"mcq", prompt:"You can see that ____ really happy. (they are)", options:["there","their","they're"], answer:"they're" },
+        { type:"mcq", prompt:"Look over ____. I can see my friends.", options:["there","their","they're"], answer:"there" },
+        { type:"mcq", prompt:"____ flying a kite.", options:["There","Their","They're"], answer:"They're" },
+        { type:"mcq", prompt:"____ are two beds in this bedroom, for my two daughters.", options:["There","Their","They're"], answer:"There" },
+        { type:"mcq", prompt:"Both of ____ beds have got warm quilts.", options:["there","their","they're"], answer:"their" },
+      ]
+    },
+    {
+      title: "Section B · Homophones — Match the Meaning",
+      points: 6,
+      questions: [
+        { type:"mcq", prompt:"The large body of salt water.", options:["see","sea"], answer:"sea" },
+        { type:"mcq", prompt:"To use your eyes to look at something.", options:["see","sea"], answer:"see" },
+        { type:"mcq", prompt:"To use your ears to notice a sound.", options:["hear","here"], answer:"hear" },
+        { type:"mcq", prompt:"In this place.", options:["hear","here"], answer:"here" },
+        { type:"mcq", prompt:"To put clothes on your body.", options:["wear","where"], answer:"wear" },
+        { type:"mcq", prompt:"Asking about a location.", options:["wear","where"], answer:"where" },
+      ]
+    },
+    {
+      title: "Section C · More Homophones",
+      points: 4,
+      questions: [
+        { type:"text", prompt:"To put words on paper with a pen.", accept:["write"] },
+        { type:"text", prompt:"Correct, or the opposite of left.", accept:["right"] },
+        { type:"text", prompt:"To use your ears to notice a sound.", accept:["hear"] },
+        { type:"text", prompt:"In this place.", accept:["here"] },
+      ]
+    },
+    {
+      title: "Section D · Homophones in Sentences",
+      points: 5,
+      questions: [
+        { type:"text", prompt:"I can ____ the birds singing outside.", accept:["hear"] },
+        { type:"text", prompt:"Turn left, not ____.", accept:["right"] },
+        { type:"text", prompt:"I need to ____ a warm coat today.", accept:["wear"] },
+        { type:"text", prompt:"The boat sailed across the ____.", accept:["sea"] },
+        { type:"text", prompt:"Please ____ your name at the top of the page.", accept:["write"] },
+      ]
+    },
+  ]
+};
+</script>
+<script src="../assets/quiz-engine.js"></script>
+</body>
+</html>

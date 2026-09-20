@@ -218,6 +218,22 @@
 
   <div class="grid" id="grid"></div>
 
+  <div class="block-review-card" style="margin-bottom:14px;">
+    <div>
+      <h3>📘 Grammar Time Reference</h3>
+      <p>A quick-reference grammar table and worked practice for every unit, 1–15.</p>
+    </div>
+    <a class="btn" href="units/grammar-time.html">Open reference →</a>
+  </div>
+
+  <div class="block-review-card">
+    <div>
+      <h3>📖 Irregular Verb List</h3>
+      <p>Base form, past simple and past participle for every irregular verb in the book.</p>
+    </div>
+    <a class="btn" href="units/irregular-verbs.html">Open reference →</a>
+  </div>
+
   <footer>Family and Friends 4 · Practice Hub · Results are sent automatically to your teacher</footer>
 </div>
 
@@ -240,9 +256,9 @@ const units = [
   { n:10, title:"I've Printed My Homework!", emoji:"🖨️", topic:"Computer words & the present perfect", l12:true, l34:true, review:true },
   { n:11, title:"Have You Ever Been...?", emoji:"🌋", topic:"Places words & the present perfect with ever", l12:true, l34:true, review:true },
   { n:12, title:"What's the Matter?", emoji:"🤒", topic:"Illness words & should/shouldn't", l12:true, l34:true, review:true },
-  { n:13, title:"Coming soon", emoji:"🔜", topic:"Waiting for unit material", l12:false, l34:false, review:false },
-  { n:14, title:"Coming soon", emoji:"🔜", topic:"Waiting for unit material", l12:false, l34:false, review:false },
-  { n:15, title:"Coming soon", emoji:"🔜", topic:"Waiting for unit material", l12:false, l34:false, review:false },
+  { n:13, title:"Can You Help Me?", emoji:"🥤", topic:"Making smoothies & object pronouns", l12:true, l34:true, review:true },
+  { n:14, title:"We Were Fishing", emoji:"🎣", topic:"Family words & the past continuous", l12:true, l34:true, review:true },
+  { n:15, title:"Good News, Bad News", emoji:"📰", topic:"Jobs words & past continuous/past simple", l12:true, l34:true, review:true },
 ];
 
 /* Block reviews after every 3 units */
@@ -250,8 +266,8 @@ const blockReviews = [
   { range:"1–3", file:"units/block-review-1-3.html", ready:true, afterUnit:3 },
   { range:"4–6", file:"units/block-review-4-6.html", ready:true, afterUnit:6 },
   { range:"7–9", file:"units/block-review-7-9.html", ready:true, afterUnit:9 },
-  { range:"10–12", file:"units/block-review-10-12.html", ready:false, afterUnit:12 },
-  { range:"13–15", file:"units/block-review-13-15.html", ready:false, afterUnit:15 },
+  { range:"10–12", file:"units/block-review-10-12.html", ready:true, afterUnit:12 },
+  { range:"13–15", file:"units/block-review-13-15.html", ready:true, afterUnit:15 },
 ];
 
 const grid = document.getElementById("grid");
